@@ -1,0 +1,160 @@
+/********************************************
+**General*/
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.logo-login{
+    background: url("../app/assets/images/logo.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 50px;
+    width: 222px;
+    margin: 20px auto 30px auto;
+}
+div.divider{
+    width: 100%;
+    height: 1.5px;
+    background-color: #b3b5bd;
+    margin: 15px 0px 15px 0px;
+}
+.shadow{
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(46,46,46,1);
+    -moz-box-shadow: 0px 2px 5px -1px rgba(46,46,46,1);
+    box-shadow: 0px 2px 5px -1px rgba(46,46,46,1);
+}
+a, a:focus{
+    color: #3f454f;
+    text-decoration: none;
+}
+a:hover{
+    color: #ba7a26;
+}
+
+
+/********************************************
+**login*/
+div.dark-line {
+    position: fixed;
+    background-color: #00b1d2;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+}
+.line-head{
+    width: 100%;
+    height: 10px;
+    background-color: #008fb5;
+}
+#login > .row, #images > .row, #unblock > .row, #unblockpwd > .row{
+    margin-top: 20px;
+}
+.container-logs {
+    width: 225px;
+    height: 39px;
+    margin: 0 auto;
+}
+div.apple, div.google{
+    cursor: pointer;
+    background-size: cover;
+    width: 110px;
+    height: 38px;
+    display: inline-block;
+    background-size: cover;
+}
+.apple {
+    background: url("../app/assets/images/logo-apple-store.svg");
+}
+.google{
+    background: url("../app/assets/images/logo-google-play.svg");
+}
+
+/********************************************
+**image*/
+#images p small span{
+    color: #e64500;
+}
+#images .container-fluid div div div:hover{
+    border: 2px solid #e64500;
+}
+#images .space{
+    margin-bottom: 10px;
+}
+.img1_opt, .img2_opt, .img3_opt, .img4_opt, .img5_opt, .img6_opt, .img7_opt, .img8_opt, .img9_opt, .img10_opt{
+    background: url("../app/assets/images/sprites.png") no-repeat;
+    margin: 5px 5px 0px 5px;
+    border-radius: 4px;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+.img1_opt{ background-position: 0 0; }
+.img2_opt{ background-position: -61px 0; }
+.img3_opt{ background-position: -122px 0; }
+.img4_opt{ background-position: -183px 0; }
+.img5_opt{ background-position: -244px 0; }
+.img6_opt{ background-position: -306px 0; }
+.img7_opt{ background-position: -367px 0; }
+.img8_opt{ background-position: -428px 0; }
+.img9_opt{ background-position: -490px 0; }
+.img10_opt{ background-position: -551px 0; }
+
+/********************************************
+**unlock*/
+#unblock .space{
+    margin-bottom: 10px;
+}
+
+/********************************************
+**changepass*/
+#unblockpwd p small span{
+    color: #e64500;
+}
+#unblockpwd .container-fluid div div div:hover{
+    border: 2px solid #e64500;
+}
+#unblockpwd .space{
+    margin-bottom: 10px;
+}
+
+/********************************************
+**footer*/
+#footerLog {
+    background-color: #ccd3ee;
+    width: 100%;
+    height: 35px;
+}
+#footerLog div div div > p, #footerLog div div div p > a, #footerLog div div div p > select {
+    padding: 0;
+    margin: 0;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+#footerLog div div div p > select {
+    display: inline-block;
+    width: 80px;
+    height: 20px;
+    margin-top: -2px;
+    margin-left: 4px;
+}
+@media (max-width: 47.9em) {
+    #footerLog div div div p > select{
+        width: 60px;
+    }
+}
+@media (max-width: 33.9em) {
+    #footerLog{
+        height: 68px;
+    }
+    #footerLog div div div p:first-child{
+        padding-top: 6px;
+    }
+    #footerLog div div div p:last-child{
+        margin-top: 0px;
+    }
+    #footerLog div div div p > select{
+        width: 80px;
+    }
+}
