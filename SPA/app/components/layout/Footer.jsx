@@ -2,12 +2,6 @@ import React from 'react';
 
 class Footer extends React.Component {
     render() {
-        var mainContainer = {
-            minHeight: '100%',
-            height: 'auto !important',
-            height: '100%',
-            margin: '0 auto -35px'
-        };
         return (
             <div className="footer" id="footerLog">
                 <div className="container-fluid">
