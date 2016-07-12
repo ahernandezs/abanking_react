@@ -1,9 +1,6 @@
 var webpack = require('webpack');
 var path =require ('path');
 
-var build_dir = path.resolve(__dirname, 'app/components');
-var app_dir = path.resolve(__dirname,'app/components');
-
 var config = {
    
    entry: './app/components/main.js',
@@ -15,7 +12,8 @@ var config = {
 	
    devServer: {
       inline: true,
-      port: 8080
+      port: 8080,
+      historyApiFallback: true
    },
 	
    module: {

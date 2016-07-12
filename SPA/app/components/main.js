@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Router from 'react-route';
-import routes from './routes.js';
+import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 
-import Prelogin from './login/Prelogin.jsx'
 
-ReactDOM.render(<Prelogin/>,document.getElementById('app'));
+//Login
+import Prelogin from './login/Prelogin.jsx';
+import Login from './login/Login.jsx';
+import Changepass from './login/Changepass.jsx';
+import Unblock from './login/Unblock.jsx';
+
+ReactDOM.render(
+	<Router history={hashHistory}>
+		<Route path="/prelogin" component={Prelogin} />
+		<Route path="/login" component={Login} />		
+		<Route path="changepass" component={Changepass} />
+		<Route path="/unblock" component={Unblock} />
+	</Router>
+	,document.getElementById('app')
+);

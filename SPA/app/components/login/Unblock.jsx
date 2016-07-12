@@ -45,10 +45,10 @@ class Unblock extends React.Component {
                                     </div>
                                     <div className="row">
                                         <div className="space col-md-4 col-md-offset-2 col-xl-3 col-xl-offset-3">
-                                            <a href="#" className="btn btn-danger btn-block">Cancelar</a>
+                                            <a href="http://localhost:8080/app/index.html#/prelogin" className="btn btn-danger btn-block">Cancelar</a>
                                         </div>
                                         <div className="space col-md-4 col-xl-3">
-                                            <a href="#" className="btn btn-primary btn-block">Continuar</a>
+                                            <a href="http://localhost:8080/app/index.html#/changepass" className="btn btn-primary btn-block">Continuar</a>
                                         </div>
                                     </div>
                                 </div>
