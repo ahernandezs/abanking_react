@@ -35,13 +35,13 @@ class Prelogin extends React.Component {
                                     </div>
                                     <div className="row">
                                         <div className="col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
-                                            <a href="#" className="btn btn-primary btn-block">Continuar</a>
+                                            <a href="http://localhost:8080/app/index.html#/login" className="btn btn-primary btn-block">Continuar</a>
                                         </div>
                                     </div>
                                     <br></br>
                                     <div className="divider"></div>
                                     <small>
-                                        <a href="#">Desbloquear&nbsp;usuario / Olvidé&nbsp;mi&nbsp;contraseña</a>
+                                        <a href="http://localhost:8080/app/index.html#/unblock">Desbloquear&nbsp;usuario / Olvidé&nbsp;mi&nbsp;contraseña</a>
                                     </small>
                                 </div>
 
