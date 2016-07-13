@@ -11,7 +11,7 @@ import Unblock from './login/Unblock.jsx';
 
 ReactDOM.render(
 	<Router history={hashHistory}>
-		<Route path="/prelogin" component={Prelogin} />
+		<Route path="/" component={Prelogin} />
 		<Route path="/login" component={Login} />		
 		<Route path="changepass" component={Changepass} />
 		<Route path="/unblock" component={Unblock} />
