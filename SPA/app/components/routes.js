@@ -1,24 +1,29 @@
 import React from 'react';
-import Route from 'react-route';
+import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 
-//Layouts
-import Header from './layout/Header.jsx';
-import Body from './layout/Body.jsx';
-import Footer from './layout/Footer.jsx';
+//share
+import LayoutLogin from './share/layout-login.jsx';
+import LayoutHome from './share/layout-home.jsx';
 
-//Login
+//login
 import Prelogin from './login/Prelogin.jsx';
 import Login from './login/Login.jsx';
 import Changepass from './login/Changepass.jsx';
 import Unblock from './login/Unblock.jsx';
 
-var routes=(
-		<Route name='prelogin' path='/' handler={Prelogin}>
-			<Route name='login' path='/login' handler={Login} />
-			<Route name='unblock' path='/unblock' handler={Unblock}>
-				<Route name='changepass' path='/changepass' handler={Changepass} />
-			</Route>
-		</Route>
-);
+//home
+import Accounts from './home/accounts.jsx';
 
-export default routes;
+export default (
+	<Router history={hashHistory}>
+		<Route component={LayoutLogin}>
+			<Route path="/" component={Prelogin} />
+			<Route path="/login" component={Login} />
+			<Route path="/changepass" component={Changepass} />
+			<Route path="/unblock" component={Unblock} />
+		</Route>
+		<Route component={LayoutHome}>
+			<Route path="/accounts" component={Accounts} />
+		</Route>
+	</Router>
+);
