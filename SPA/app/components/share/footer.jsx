@@ -11,10 +11,10 @@ class Footer extends React.Component {
                         </div>
                         <div className="col-sm-7 col-xl-4 col-xl-offset-5">
                             <p>
-                                <a href="#">Aviso legal</a> |
-                                <a href="#">&nbsp;Sucursales</a> |
-                                <a href="#">&nbsp;Cont&aacute;ctanos</a> |
-                                <a href="#">&nbsp;Ayuda</a>
+                                <a href="">Aviso legal</a>&nbsp;|&nbsp;
+                                <a href="">Sucursales</a>&nbsp;|&nbsp;
+                                <a href="">Cont&aacute;ctanos</a>&nbsp;|&nbsp;
+                                <a href="">Ayuda</a>&nbsp;
                                 <select className="form-control">
                                     <option>Lenguaje</option>
                                     <option>Español</option>
