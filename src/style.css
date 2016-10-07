@@ -336,7 +336,7 @@ h6{
  * Navbar
  * ========================================================================== */
 
- .navbar {
+ /*.navbar {
      background-color: #00b1d2;
  }
  .logo-abanking {
@@ -453,4 +453,4 @@ h6{
      .navbar-nav .nav-link + .nav-link {
          margin-left: 1rem;
      }
- }
+ }*/
