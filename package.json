@@ -81,8 +81,11 @@
     "testPathIgnorePatterns": [
       "<rootDir>/(build|docs|node_modules)/"
     ],
-    "testEnvironment": "node",
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$"
+    "<testEnvironmen></testEnvironmen>t": "node",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$",
+    "coverageDirectory": "reports",
+    "coverageReporters": ["lcov"],
+    "collectCoverage": true
   },
   "babel": {
     "presets": [
