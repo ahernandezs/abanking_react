@@ -20,7 +20,8 @@
  .btn-cancel:hover              { background: #56717e; }
  .btn-confirm                   { background: #7cb342; }
  .btn-confirm:hover             { background: #75a83e; }
- .btn-sesion:hover              { background-color: #038b7e; }
+ .btn-sesion:hover              { background: #038b7e; }
+ .btn-language:hover            { background: #da4809; }
 
 /*
  * Fonts
@@ -111,6 +112,7 @@
 html, body, #root, .div-cont{
     height: 100%;
     width: 100%;
+    color: #212121;
 }
 .link, .link:hover, .link:active, .link:link, .link:visited{
     color: #757575;
@@ -148,7 +150,7 @@ h6{
  * Buttons
  * ========================================================================== */
 
-.btn-blue, .btn-cancel, .btn-confirm{
+.btn-blue, .btn-cancel, .btn-confirm, .btn-language{
     -webkit-box-shadow: 0px 3px 4px -2px rgba(135,135,135,1);
     -moz-box-shadow: 0px 3px 4px -2px rgba(135,135,135,1);
     box-shadow: 0px 3px 4px -2px rgba(135,135,135,1);
@@ -187,7 +189,14 @@ h6{
     background-color: #038b7e;
     color: #ffffff;
 }
-
+.btn-language{
+    background-color: #e64500;
+    color: #ffffff;
+}
+.btn-language:hover, .btn-language:active, .btn-language:focus{
+    background-color: #da4809;
+    color: #ffffff;
+}
 /*
  * LayoutLogin
  * ========================================================================== */
@@ -251,6 +260,14 @@ h6{
     min-height: -webkit-calc(100% - 91.6px);
     min-height: -o-calc(100% - 91.6px);
     min-height: calc(100% - 91.6px);
+}
+@media (max-width: 48em) {
+    #container-home{
+        min-height: -moz-calc(100% - 101.6px);
+        min-height: -webkit-calc(100% - 101.6px);
+        min-height: -o-calc(100% - 101.6px);
+        min-height: calc(100% - 101.6px);
+    }
 }
 
 /*
@@ -414,7 +431,6 @@ h6{
     padding: 0px 9.5px;
     color: #ffffff;
 }
-
 #navbar li{
     margin: 0;
 }
@@ -553,13 +569,128 @@ h6{
 }
 @media (max-width: 48em) {
     #status-sesion{
-        height: 65px;
+        height: 50px;
+    }
+    #status-sesion div.col-xs-12:nth-child(2) p{
+        float: none;
     }
     #status-sesion p{
-        margin: 8px 0px 0px 0px;
-        text-align: left;
+        margin: 4px 0px 0px 0px;
+        text-align: center;
     }
     #status-sesion .btn-sesion{
-        margin-top: 5px;
+        display: none;
     }
+}
+#men .globo-men:before {
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 0 16px 12px 16px;
+    border-color: #FFFFFF transparent #FFFFFF transparent;
+    top: -10px;
+    right: 4.5px;
+}
+#men .globo-men{
+    margin: 10px 0px;
+    font-size: .7em;
+    color: #212121;
+    border: 0;
+    width: 290px;
+    text-align: center;
+    padding: 6px 0px;
+}
+#men div.globo-men h6{
+    color: #0288D1;
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+#men .globo-cont{
+    width: 100%;
+    margin-top: 5px;
+}
+#men .largo .globo-cont{
+    height: 55px;
+}
+#men .corto .globo-cont{
+    height: 40px;
+}
+#men .globo-cont div:nth-child(1){
+    height: 100%;
+    width: 40px;
+    float: left;
+    color: #0288D1;
+    font-size: 2.5em;
+}
+#men .largo .globo-cont div:nth-child(1){
+    padding-top: 8px;
+}
+#men .corto .globo-cont div:nth-child(1){
+    padding-top: 2px;
+}
+#men .globo-cont div:nth-child(2){
+    font-size: 1.17em;
+    height: 100%;
+    width: 210px;
+    float: right;
+    text-align: left;
+}
+#men .largo div:nth-child(3) a p{
+    padding-top: 11px;
+}
+#men .largo div:nth-child(4) a p{
+    padding-top: 3px;
+}
+#men .largo div:nth-child(5) a p{
+    padding-top: 5px;
+}
+#men .largo div:nth-child(7) a p{
+    padding-top: 12px;
+}
+#men .corto div:nth-child(3) a p{
+    padding-top: 5px;
+}
+#men .corto div:nth-child(4) a p{
+    padding-top: 12px;
+}
+#men .corto div:nth-child(6) a p{
+    padding-top: 12px;
+}
+#men .globo-cont a{
+    color: #000000;
+    line-height: 1;
+    text-decoration: none;
+}
+#men .globo-cont a small{
+    color: #212121;
+}
+#men .largo div:nth-child(6){
+    margin: 10px 0px;
+}
+#men .corto div:nth-child(5){
+    margin: 10px 0px;
+}
+#men .globo-cont:hover{
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+#men .corto .globo-cont:nth-child(3):hover{
+    background-color: #ffffff;
+}
+
+/*
+ * Modal for language
+ * ========================================================================== */
+
+#language .modal-header{
+    border: none;
+}
+#language .container{
+    padding-bottom: 10px;
+}
+#language p{
+    padding: 5px 0px 15px;
+    color: #212121;
 }

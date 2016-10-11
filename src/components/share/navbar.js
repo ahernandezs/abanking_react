@@ -57,9 +57,42 @@ class Navbar extends React.Component {
                                         <button className="btn" type="button" id="dropdowncot" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span className="icon-headphones"></span>
                                         </button>
-                                        <div className="globo-men dropdown-menu dropdown-menu-right shadow-second" aria-labelledby="dropdowncot">
-                                            <p>Contácto</p>
-                                            <p>En proceso</p>
+                                        <div className="globo-men dropdown-menu dropdown-menu-right shadow" aria-labelledby="dropdowncot">
+                                            <div className="container corto">
+                                                <h6>Contácto</h6>
+                                                <p className="container">Nuestros asesores están disponibles para asesorarte por los siguientes medios.</p>
+                                                <div className="globo-cont">
+                                                    <div><span className="icon-phone"></span></div>
+                                                    <div>
+                                                        <Link>
+                                                            <p>
+                                                                Llamenos al 01 800 3848 3990 <br></br> o al 01 800 9989 2718
+                                                            </p>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                                <div className="globo-cont">
+                                                    <div><span className="icon-comment-discussion"></span></div>
+                                                    <div>
+                                                        <Link to="/accounts" activeClassName="active">
+                                                            <p>
+                                                                Comentarios generales.
+                                                            </p>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                                <div className="divider"></div>
+                                                <div className="globo-cont">
+                                                    <div><span className="icon-question"></span></div>
+                                                    <div>
+                                                        <Link to="/accounts" activeClassName="active">
+                                                            <p>
+                                                                Ayuda con el sitio web.
+                                                            </p>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -67,9 +100,57 @@ class Navbar extends React.Component {
                                         <button className="btn" type="button" id="dropdowncog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span className="icon-gear"></span>
                                         </button>
-                                        <div className="globo-men dropdown-menu dropdown-menu-right shadow-second" aria-labelledby="dropdowncog">
-                                            <p>Configuración</p>
-                                            <p>En proceso</p>
+                                        <div className="globo-men dropdown-menu dropdown-menu-right shadow" aria-labelledby="dropdowncog">
+                                            <div className="container largo">
+                                                <h6>Configuración</h6>
+                                                <p className="container">Configure sus alertas, su idioma y administre su información personal.</p>
+                                                <div className="globo-cont">
+                                                    <div><span className="icon-safe"></span></div>
+                                                    <div>
+                                                        <Link to="/accounts" activeClassName="active">
+                                                            <p>
+                                                                Seguridad<br></br>
+                                                                <small>Actualice sus datos para proteger su cuenta.</small>
+                                                            </p>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                                <div className="globo-cont">
+                                                    <div><span className="icon-key"></span></div>
+                                                    <div>
+                                                        <Link to="/accounts" activeClassName="active">
+                                                            <p>
+                                                                Acceso<br></br>
+                                                                <small>Actualice su imagen de seguridad y contraseña de acceso.</small>
+                                                            </p>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                                <div className="globo-cont">
+                                                    <div><span className="icon-alarm"></span></div>
+                                                    <div>
+                                                        <a href="#set"></a>
+                                                        <Link to="/accounts" activeClassName="active">
+                                                            <p>
+                                                                Alertas y notificaciones<br></br>
+                                                                <small>Modifique las alertas generadas por cambios en su cuenta.</small>
+                                                            </p>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                                <div className="divider"></div>
+                                                <div className="globo-cont">
+                                                    <div><span className="icon-earth"></span></div>
+                                                    <div>
+                                                        <a href="#language" data-toggle="modal">
+                                                            <p>
+                                                                Idioma<br></br>
+                                                                <small>Seleccione el idioma de su preferencia.</small>
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -116,10 +197,16 @@ class Navbar extends React.Component {
                         <div className="container">
                             <ul className="nav navbar-nav">
                                 <li className="nav-item">
-                                    <a className="nav-link active">Ajustes</a>
+                                    <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-safe"></span>&nbsp;Seguridad</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link">Tour</a>
+                                    <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-key"></span>&nbsp;Acceso</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-alarm"></span>&nbsp;Alertas y notificaciones</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="#language" data-toggle="modal" className="btn btn-navbar-vertical"><span className="icon-earth"></span>&nbsp;Idiomas</a>
                                 </li>
                             </ul>
                         </div>
@@ -129,13 +216,10 @@ class Navbar extends React.Component {
                         <div className="container">
                             <ul className="nav navbar-nav">
                                 <li className="nav-item">
-                                    <a className="nav-link active">Chat</a>
+                                    <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-comment-discussion"></span>&nbsp;Comentarios generales</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link">Email</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link">Móvil</a>
+                                    <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-question"></span>&nbsp;Ayuda con el sitio web</Link>
                                 </li>
                             </ul>
                         </div>
