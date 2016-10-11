@@ -2,7 +2,7 @@
   "name": "abanking-omega",
   "version": "0.1.0",
   "private": true,
-  "homepage": "abanking_omega",
+  "homepage": "/abanking_omega",
   "devDependencies": {
     "autoprefixer": "6.4.1",
     "babel-core": "6.14.0",
