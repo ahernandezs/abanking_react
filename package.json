@@ -2,6 +2,7 @@
   "name": "abanking-omega",
   "version": "0.1.0",
   "private": true,
+  "homepage": "abanking_omega",
   "devDependencies": {
     "autoprefixer": "6.4.1",
     "babel-core": "6.14.0",
@@ -28,6 +29,9 @@
     "filesize": "3.3.0",
     "find-cache-dir": "0.1.1",
     "fs-extra": "0.30.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-sonar-runner": "^2.4.7",
     "gzip-size": "3.0.0",
     "html-webpack-plugin": "2.22.0",
     "http-proxy-middleware": "0.17.1",
@@ -39,6 +43,7 @@
     "promise": "7.1.1",
     "react-dev-utils": "^0.2.1",
     "recursive-readdir": "2.1.0",
+    "redux-devtools": "^3.3.1",
     "rimraf": "2.5.4",
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
@@ -51,7 +56,9 @@
     "bootstrap": "^4.0.0-alpha.4",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-router": "^2.8.1"
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "redux": "^3.6.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
