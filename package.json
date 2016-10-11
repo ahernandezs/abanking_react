@@ -81,7 +81,7 @@
     "testPathIgnorePatterns": [
       "<rootDir>/(build|docs|node_modules)/"
     ],
-    "<testEnvironmen></testEnvironmen>t": "node",
+    "testEnvironment": "node",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$",
     "coverageDirectory": "reports",
     "coverageReporters": ["lcov"],
