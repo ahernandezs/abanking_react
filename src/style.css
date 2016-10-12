@@ -142,6 +142,11 @@ div.divider{
     -moz-box-shadow: 0px 5px 6px -5px rgba(184,184,184,1);
     box-shadow: 0px 5px 6px -5px rgba(184,184,184,1);
 }
+.shadow-fourth{
+    -webkit-box-shadow: 0px 1.1px 5.1px -1px rgba(77,77,77,1);
+    -moz-box-shadow: 0px 1.1px 5.1px -1px rgba(77,77,77,1);
+    box-shadow: 0px 1.1px 5.1px -1px rgba(77,77,77,1);
+}
 h6{
     font-size: 1.1em;
 }
@@ -693,4 +698,58 @@ h6{
 #language p{
     padding: 5px 0px 15px;
     color: #212121;
+}
+
+/*
+ * Slide
+ * ========================================================================== */
+
+#slide{
+    margin: 20px auto;
+    width: 90%;
+}
+#slide div.card-slide{
+    padding: 5px;
+}
+#slide .slick-prev, #slide .slick-next{
+    height: 100%;
+    width: 25px;
+    z-index: 1;
+}
+#slide .slick-prev{
+    left: 25;
+}
+#slide .slick-next{
+    right: 25;
+}
+#slide .slick-prev:before{
+    color: #009688;
+}
+#slide .slick-next:before{
+    color: #009688;
+}
+
+/*
+ * Cards Accounts
+ * ========================================================================== */
+
+ #slide .card{
+     border: 0;
+     height: 300px;
+ }
+ #slide .card-block{
+     padding: 0px;
+ }
+ #slide .cont-img {
+    max-width: 100%;
+    height: 105px;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+}
+#slide img {
+    display: block;
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
 }

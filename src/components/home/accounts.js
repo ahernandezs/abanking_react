@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import SlideAccount from './slide.js';
 
 class Accounts extends Component {
   render() {
     return (
         <div>
-            <h1>Accounts</h1>
+            <SlideAccount></SlideAccount>
         </div>
     );
   }

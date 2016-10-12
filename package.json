@@ -58,7 +58,9 @@
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
-    "redux": "^3.6.0"
+    "react-slick": "^0.14.5",
+    "redux": "^3.6.0",
+    "slick-carousel": "^1.6.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -84,7 +86,9 @@
     "testEnvironment": "node",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$",
     "coverageDirectory": "reports",
-    "coverageReporters": ["lcov"],
+    "coverageReporters": [
+      "lcov"
+    ],
     "collectCoverage": true
   },
   "babel": {
