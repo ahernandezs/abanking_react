@@ -21,13 +21,13 @@ class Unblock extends Component {
 
             <div className="row">
                 <div className="col-md-8 offset-md-2">
-                    <input type="password" className="form-control" placeholder="Usuario"></input>
+                    <input type="password" className="form-control" placeholder="Usuario" />
                 </div>
             </div>
 
             <div className="row">
                 <div className="col-md-8 offset-md-2">
-                    <input type="password" className="form-control" placeholder="Número de fólio"></input>
+                    <input type="password" className="form-control" placeholder="Número de fólio" />
                 </div>
             </div>
 

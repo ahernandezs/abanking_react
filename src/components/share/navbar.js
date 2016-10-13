@@ -66,7 +66,7 @@ class Navbar extends React.Component {
                                                     <div>
                                                         <Link>
                                                             <p>
-                                                                Llamenos al 01 800 3848 3990 <br></br> o al 01 800 9989 2718
+                                                                Llamenos al 01 800 3848 3990 <br /> o al 01 800 9989 2718
                                                             </p>
                                                         </Link>
                                                     </div>
@@ -109,7 +109,7 @@ class Navbar extends React.Component {
                                                     <div>
                                                         <Link to="/accounts" activeClassName="active">
                                                             <p>
-                                                                Seguridad<br></br>
+                                                                Seguridad<br />
                                                                 <small>Actualice sus datos para proteger su cuenta.</small>
                                                             </p>
                                                         </Link>
@@ -120,7 +120,7 @@ class Navbar extends React.Component {
                                                     <div>
                                                         <Link to="/accounts" activeClassName="active">
                                                             <p>
-                                                                Acceso<br></br>
+                                                                Acceso<br />
                                                                 <small>Actualice su imagen de seguridad y contraseña de acceso.</small>
                                                             </p>
                                                         </Link>
@@ -132,7 +132,7 @@ class Navbar extends React.Component {
                                                         <a href="#set"></a>
                                                         <Link to="/accounts" activeClassName="active">
                                                             <p>
-                                                                Alertas y notificaciones<br></br>
+                                                                Alertas y notificaciones<br />
                                                                 <small>Modifique las alertas generadas por cambios en su cuenta.</small>
                                                             </p>
                                                         </Link>
@@ -144,7 +144,7 @@ class Navbar extends React.Component {
                                                     <div>
                                                         <a href="#language" data-toggle="modal">
                                                             <p>
-                                                                Idioma<br></br>
+                                                                Idioma<br />
                                                                 <small>Seleccione el idioma de su preferencia.</small>
                                                             </p>
                                                         </a>

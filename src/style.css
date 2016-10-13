@@ -706,7 +706,17 @@ h6{
 
 #slide{
     margin: 20px auto;
-    width: 90%;
+    width: 80%;
+}
+@media (min-width: 544px) {
+    #slide{
+        width: 95%;
+    }
+}
+@media (min-width: 768px) {
+    #slide{
+        width: 100%;
+    }
 }
 #slide div.card-slide{
     padding: 5px;
@@ -735,10 +745,9 @@ h6{
 
  #slide .card{
      border: 0;
-     height: 300px;
- }
- #slide .card-block{
-     padding: 0px;
+     height: 350px;
+     padding: 0;
+     margin: 0;
  }
  #slide .cont-img {
     max-width: 100%;
@@ -752,4 +761,147 @@ h6{
     object-fit: cover;
     height: 150px;
     width: 100%;
+}
+
+/*
+ * Cards Account - card
+ * ========================================================================== */
+
+.checks-card div.card-block, .checks-card div.card-block p,
+.credit-card div.card-block, .credit-card div.card-block p{
+    padding: 0;
+    margin: 0;
+}
+.checks-card div.card-block:nth-child(1),
+.credit-card div.card-block:nth-child(1){
+    padding-top: 5px;
+    height: 35px;
+}
+.checks-card strong, .credit-card strong{
+    letter-spacing: .5pt;
+}
+.checks-card .text-muted, .credit-card .text-muted{
+    margin-left: 10px;
+    letter-spacing: .5pt;
+}
+.checks-card div.card-block:nth-child(3),
+.credit-card div.card-block:nth-child(3){
+    height: 30px;
+    padding-top: 6px;
+    text-align: center;
+    background-color: #f1f1f1;
+    font-size: .7em;
+}
+.checks-card div.card-block:nth-child(4),
+.credit-card div.card-block:nth-child(4){
+    height: 120px;
+    margin: 0;
+    padding: 5px 0px;
+}
+.checks-card table, .credit-card table{
+    width: 100%;
+    min-height: 100px;
+    font-size: .82em;
+}
+.checks-card table tr td:nth-child(2), .credit-card table tr td:nth-child(2),
+.checks-card table tr th:nth-child(2), .credit-card table tr th:nth-child(2){
+    text-align: right;
+}
+.credit-card table tr td:nth-child(2) input{
+    margin: 0;
+    padding: 0px 0px 0px 2px;
+    width: 70px;
+    float: right;
+    font-size: 1em;
+}
+.credit-card input[type="radio"]{
+    display: none;
+
+}
+.credit-card label {
+    margin: 0;
+}
+.credit-card input[type="radio"] + label span {
+    background-color: #e3e3e3;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-right: 5px;
+    cursor:pointer;
+}
+.credit-card input[type="radio"]:checked + label span {
+    background-color: #e64500;
+    border: 3px solid #e3e3e3;
+}
+.checks-card div.card-block:nth-child(5),
+.credit-card div.card-block:nth-child(5){
+    height: 60px;
+    padding-top: 10px;
+    border-top: 2px solid #e3e3e3;
+}
+.credit-card div.card-block:nth-child(5) .btn-blue,
+.debit-card div.card-block:nth-child(3) .btn-language{
+    font-size: .75em;
+    padding: 5px 0px;
+}
+.checks-card div.card-block:nth-child(5) a.link,
+.credit-card div.card-block:nth-child(5) a.link{
+    color: #03A9F4;
+}
+.checks-card div.card-block:nth-child(5) a.link:hover,
+.credit-card div.card-block:nth-child(5) a.link:hover{
+    color: #0288D1;
+}
+.debit-card div.cont-img{
+    min-height: 170px;
+}
+.debit-card img{
+    min-height: 170px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.debit-card div.card-block:nth-child(2){
+    text-align: center;
+    height: 120px;
+    font-size: 1em;
+}
+.debit-card div.card-block:nth-child(2) span{
+    font-size: .9em;
+    font-weight: 600;
+    color: #212121;
+}
+.debit-card div.card-block:nth-child(2) small{
+    font-size: .75em;
+    color: #212121;
+}
+.debit-card div.card-block:nth-child(3){
+    padding-top: 10px;
+    height: 60px;
+    border-top: 2px solid #e3e3e3;
+}
+
+/*
+ * Balance
+ * ========================================================================== */
+
+#balance .card{
+    border: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #f1f1f1;
+    margin-top: 5px;
+}
+#balance div#minutes{
+    border-top: 2px dotted #BDBDBD;
+}
+#balance button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+#balance span{
+    color: #009688;
 }
