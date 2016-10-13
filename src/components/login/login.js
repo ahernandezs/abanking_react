@@ -12,7 +12,7 @@ class Login extends Component {
             <div className="row">
                 <div className="col-xs-12">
                     <h6 className="card-title">
-                        Bienvenido <br></br>
+                        Bienvenido <br />
                         <small>Sergio Xavier Consuelo Ortiz</small>
                     </h6>
                     <p>
@@ -43,7 +43,7 @@ class Login extends Component {
 
             <div className="row">
                 <div className="col-md-8 offset-md-2">
-                    <input type="password" className="form-control" placeholder="Contraseña"></input>
+                    <input type="password" className="form-control" placeholder="Contraseña" />
                 </div>
             </div>
 

@@ -53,13 +53,13 @@ class Changepass extends Component {
 
             <div className="row">
                 <div className="col-md-8 offset-md-2">
-                    <input type="password" className="form-control" placeholder="Nueva contraseña"></input>
+                    <input type="password" className="form-control" placeholder="Nueva contraseña" />
                 </div>
             </div>
 
             <div className="row">
                 <div className="col-md-8 offset-md-2">
-                    <input type="password" className="form-control" placeholder="Confirmar contraseña"></input>
+                    <input type="password" className="form-control" placeholder="Confirmar contraseña" />
                 </div>
             </div>
 
