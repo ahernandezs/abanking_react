@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router';
 import Slider from 'react-slick'
-import card1 from '../../images/cards/cuenta_checks_card.png';
-import card2 from '../../images/cards/cuenta_debit_card.png';
-import card3 from '../../images/cards/cuenta_credit_card.png';
+import card1 from '../../../images/cards/cuenta_checks_card.png';
+import card2 from '../../../images/cards/cuenta_debit_card.png';
+import card3 from '../../../images/cards/cuenta_credit_card.png';
 
 class SlideAccount extends Component {
   render() {
@@ -67,22 +67,24 @@ class SlideAccount extends Component {
                                 <div className="card-block">
                                     <div className="container">
                                         <table>
-                                            <tr>
-                                                <th>Disponible</th>
-                                                <th>$ 15,000.00</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Depósitos</td>
-                                                <td>$ 16,000.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Pagos</td>
-                                                <td>$ 500.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Retiros</td>
-                                                <td>$ 500.00</td>
-                                            </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <th>Disponible</th>
+                                                    <th>$ 15,000.00</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Depósitos</td>
+                                                    <td>$ 16,000.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pagos</td>
+                                                    <td>$ 500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Retiros</td>
+                                                    <td>$ 500.00</td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -122,36 +124,38 @@ class SlideAccount extends Component {
                                 <div className="card-block">
                                     <div className="container">
                                         <table>
-                                            <tr>
-                                                <th>
-                                                    <input type="radio" id="r11" name="pago1" value="option1" checked={true} />
-                                                    <label for="r11"><span></span>Pago total</label>
-                                                </th>
-                                                <th>$ 9,000.00</th>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="radio" id="r22" name="pago1" value="option2" />
-                                                    <label for="r22"><span></span>Pago mínimo</label>
-                                                </td>
-                                                <td>$ 2,000.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="radio" id="r33" name="pago1" value="option3" />
-                                                    <label for="r33"><span></span>Pago sin intereses</label>
-                                                </td>
-                                                <td>$ 4,000.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="radio" id="r44" name="pago1" value="option4" />
-                                                    <label for="r44"><span></span>Otra cantidad</label>
-                                                </td>
-                                                <td>
-                                                    <input type="text" className="form-control" placeholder="$ 0.00" />
-                                                </td>
-                                            </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        <input type="radio" id="r11" name="pago1" value="option1"/>
+                                                        <label><span></span>Pago total</label>
+                                                    </th>
+                                                    <th>$ 9,000.00</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="radio" id="r22" name="pago1" value="option2" />
+                                                        <label><span></span>Pago mínimo</label>
+                                                    </td>
+                                                    <td>$ 2,000.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="radio" id="r33" name="pago1" value="option3" />
+                                                        <label><span></span>Pago sin intereses</label>
+                                                    </td>
+                                                    <td>$ 4,000.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="radio" id="r44" name="pago1" value="option4" />
+                                                        <label><span></span>Otra cantidad</label>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" className="form-control" placeholder="$ 0.00" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -194,36 +198,38 @@ class SlideAccount extends Component {
                                 <div className="card-block">
                                     <div className="container">
                                         <table>
-                                            <tr>
-                                                <th>
-                                                    <input type="radio" id="r1" name="pago" value="option1" checked={true} />
-                                                    <label for="r1"><span></span>Pago total</label>
-                                                </th>
-                                                <th>$ 16,000.00</th>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="radio" id="r2" name="pago" value="option2" />
-                                                    <label for="r2"><span></span>Pago mínimo</label>
-                                                </td>
-                                                <td>$ 4,000.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="radio" id="r3" name="pago" value="option3" />
-                                                    <label for="r3"><span></span>Pago sin intereses</label>
-                                                </td>
-                                                <td>$ 6,500.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="radio" id="r4" name="pago" value="option4" />
-                                                    <label for="r4"><span></span>Otra cantidad</label>
-                                                </td>
-                                                <td>
-                                                    <input type="text" className="form-control" placeholder="$ 0.00" />
-                                                </td>
-                                            </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        <input type="radio" id="r1" name="pago" value="option1" />
+                                                        <label><span></span>Pago total</label>
+                                                    </th>
+                                                    <th>$ 16,000.00</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="radio" id="r2" name="pago" value="option2" />
+                                                        <label><span></span>Pago mínimo</label>
+                                                    </td>
+                                                    <td>$ 4,000.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="radio" id="r3" name="pago" value="option3" />
+                                                        <label><span></span>Pago sin intereses</label>
+                                                    </td>
+                                                    <td>$ 6,500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="radio" id="r4" name="pago" value="option4" />
+                                                        <label><span></span>Otra cantidad</label>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" className="form-control" placeholder="$ 0.00" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -259,7 +265,7 @@ class SlideAccount extends Component {
                                     <div className="container">
                                         <div className="row">
                                             <div className="col-xs-12">
-                                                <Link to="/accounts" activeClassName="active" className="btn btn-language btn-block">Solicítala ya</Link>
+                                                <Link to="/accounts" activeClassName="active" className="btn btn-ads btn-block">Solicítala ya</Link>
                                             </div>
                                         </div>
                                     </div>

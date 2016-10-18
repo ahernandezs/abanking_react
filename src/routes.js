@@ -12,7 +12,7 @@ import Unblock from './components/login/unblock.js';
 import Changepass from './components/login/changepass.js';
 
 //home
-import Accounts from './components/home/accounts.js';
+import Accounts from './components/home/account/accounts.js';
 
 export default (
 	<Router history={hashHistory}>
