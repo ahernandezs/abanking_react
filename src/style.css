@@ -22,6 +22,7 @@
  .btn-confirm:hover             { background: #75a83e; }
  .btn-sesion:hover              { background: #038b7e; }
  .btn-language:hover            { background: #da4809; }
+ .btn-ads                       { background-color: #edb72b; }
 
 /*
  * Fonts
@@ -29,11 +30,11 @@
 
  @font-face {
    font-family: 'icomoon';
-   src:  url('./fonts/icomoon.eot?r83990');
-   src:  url('./fonts/icomoon.eot?r83990#iefix') format('embedded-opentype'),
-     url('./fonts/icomoon.ttf?r83990') format('truetype'),
-     url('./fonts/icomoon.woff?r83990') format('woff'),
-     url('./fonts/icomoon.svg?r83990#icomoon') format('svg');
+   src:  url('./fonts/icomoon.eot?6r3211');
+   src:  url('./fonts/icomoon.eot?6r3211#iefix') format('embedded-opentype'),
+     url('./fonts/icomoon.ttf?6r3211') format('truetype'),
+     url('./fonts/icomoon.woff?6r3211') format('woff'),
+     url('./fonts/icomoon.svg?6r3211#icomoon') format('svg');
    font-weight: normal;
    font-style: normal;
  }
@@ -53,6 +54,9 @@
    -moz-osx-font-smoothing: grayscale;
  }
 
+ .icon-notice:before {
+   content: "\e909";
+ }
  .icon-basket:before {
    content: "\e904";
  }
@@ -155,7 +159,7 @@ h6{
  * Buttons
  * ========================================================================== */
 
-.btn-blue, .btn-cancel, .btn-confirm, .btn-language{
+.btn-blue, .btn-cancel, .btn-confirm, .btn-language, .btn-ads{
     -webkit-box-shadow: 0px 3px 4px -2px rgba(135,135,135,1);
     -moz-box-shadow: 0px 3px 4px -2px rgba(135,135,135,1);
     box-shadow: 0px 3px 4px -2px rgba(135,135,135,1);
@@ -202,6 +206,23 @@ h6{
     background-color: #da4809;
     color: #ffffff;
 }
+.btn-ads{
+    background-color: #edb72b;
+    color: #ffffff;
+}
+.btn-ads:hover, .btn-ads:active, .btn-ads:focus{
+    background-color: #e0ad28;
+    color: #ffffff;
+}
+.btn-adsb{
+    background-color: #000000;
+    color: #ffffff;
+}
+.btn-adsb:hover, .btn-adsb:active, .btn-adsb:focus{
+    background-color: #212121;
+    color: #ffffff;
+}
+
 /*
  * LayoutLogin
  * ========================================================================== */
@@ -832,17 +853,17 @@ h6{
     cursor:pointer;
 }
 .credit-card input[type="radio"]:checked + label span {
-    background-color: #e64500;
+    background-color: #edb72b;
     border: 3px solid #e3e3e3;
 }
 .checks-card div.card-block:nth-child(5),
 .credit-card div.card-block:nth-child(5){
     height: 60px;
     padding-top: 10px;
-    border-top: 2px solid #e3e3e3;
+    border-top: 1.5px solid #e3e3e3;
 }
 .credit-card div.card-block:nth-child(5) .btn-blue,
-.debit-card div.card-block:nth-child(3) .btn-language{
+.debit-card div.card-block:nth-child(3) .btn-ads{
     font-size: .75em;
     padding: 5px 0px;
 }
@@ -879,29 +900,133 @@ h6{
 .debit-card div.card-block:nth-child(3){
     padding-top: 10px;
     height: 60px;
-    border-top: 2px solid #e3e3e3;
+    border-top: 1.5px solid #e3e3e3;
 }
 
 /*
  * Balance
  * ========================================================================== */
 
+#balance{
+    margin-top: 10px;
+}
+#balance > button{
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin-top: -2px;
+    outline: none;
+    -webkit-transition: -webkit-transform .5s; /* Safari */
+    transition: transform .5s;
+}
+#balance > button:focus{
+    -webkit-transform: rotate(-450deg); /* Safari */
+    transform: rotate(-450deg);
+}
+#balance > p{
+    display: inline-block;
+    font-size: 1em;
+    margin-left: 5px;
+    color: #212121;
+}
+#balance div#minutes{
+    margin-top: -13px;
+    border-top: 2px dotted #BDBDBD;
+}
 #balance .card{
     border: 0;
     border-radius: 0;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     background-color: #f1f1f1;
-    margin-top: 5px;
+    margin-top: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-#balance div#minutes{
-    border-top: 2px dotted #BDBDBD;
-}
-#balance button{
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-#balance span{
+#balance button > span{
     color: #009688;
+}
+#min-balance p{
+    margin: 0;
+    line-height: 1.1;
+}
+#min-balance p:nth-child(2){
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+#min-balance p:nth-child(2) span{
+    font-size: .7em;
+}
+#min-balance small{
+    color: #757575;
+}
+#min-time p:nth-child(1){
+    margin: 0;
+}
+#min-time p.new-p{
+    display: inline-block;
+    margin-bottom:10px;
+}
+#min-time a.new-link{
+    display: inline-block;
+    float: right;
+    color: #07a0e7;
+    text-decoration: none;
+}
+#min-time a.new-link:hover{
+    color: #0288D1;
+}
+#min-time p.label{
+    font-weight: 600;
+    font-size: .75em;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+#min-time .form-control{
+    margin-bottom: 8px;
+}
+#min-time .btn{
+    margin-top: 19px;
+}
+#minutes div.divider-balance{
+    border-left: 2px solid #757575;
+}
+@media (max-width: 767px) {
+    #minutes div.divider-balance{
+        border-left: 0;
+        border-top: 2px solid #757575;
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 543px) {
+    #min-time .btn{
+        margin-bottom: 20px;
+    }
+}
+
+/*
+ * Ads
+ * ========================================================================== */
+#publicity{
+    margin-top: 40px;
+}
+#publicity .row {
+    padding-top: 8px;
+}
+#publicity .card-block {
+    margin: 0;
+    padding: 0;
+}
+#publicity a {
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 10px;
+}
+#publicity .btn-secondary {
+    background-color: #1b1b1b;
+}
+#publicity .btn-secondary:hover {
+    background-color: #000000;
 }

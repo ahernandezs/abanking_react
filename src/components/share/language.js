@@ -3,7 +3,7 @@ import React from 'react';
 class Language extends React.Component {
     render() {
         return (
-            <div id="language" className="modal fade" tabindex="-1" role="dialog" aria-labelledby="language" aria-hidden="true">
+            <div id="language" className="modal fade" tabIndex="-1" role="dialog" aria-labelledby="language" aria-hidden="true">
                 <div className="modal-dialog modal-sm">
                     <div className="modal-content">
                         <div className="modal-header">
