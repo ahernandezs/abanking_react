@@ -1,32 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 import Footer from './footer.js';
 import Navbar from './navbar.js';
 
-class LayoutHome extends Component {
+import { Container, Row, Col } from 'reactstrap';
+
+export default class LayoutHome extends React.Component {
   render() {
     return (
         <div className="div-cont">
 
             <div id="status-sesion">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xs-12 col-md-6">
+                <Container>
+                    <Row>
+                        <Col xs="12" md="6">
                             <p>Último acceso: <i>Lunes, Octubre 10, 2016 11:37 AM</i></p>
-                        </div>
-                        <div className="col-xs-12 col-md-6">
+                        </Col>
+                        <Col xs="12" md="6">
                             <Link to="/" activeClassName="active" className="btn btn-sesion">Cerrar sesión</Link>
                             <p><strong>Sergio Xavier Consuelo Ortiz</strong></p>
-                        </div>
-                    </div>
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
 
             <Navbar></Navbar>
 
-            <div id="container-home" className="container">
+            <Container id="container-home">
                 {this.props.children}
-            </div>
+            </Container>
 
             <Footer></Footer>
 
@@ -34,5 +36,3 @@ class LayoutHome extends Component {
     );
   }
 }
-
-export default LayoutHome;

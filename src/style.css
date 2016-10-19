@@ -151,7 +151,7 @@ div.divider{
     -moz-box-shadow: 0px 1.1px 5.1px -1px rgba(77,77,77,1);
     box-shadow: 0px 1.1px 5.1px -1px rgba(77,77,77,1);
 }
-h6{
+h4{
     font-size: 1.1em;
 }
 
@@ -226,7 +226,9 @@ h6{
 /*
  * LayoutLogin
  * ========================================================================== */
-
+.color{
+    background-color: rgb(235, 139, 104);
+}
 #container-login{
     padding-top: 70px;
     padding-bottom: 90px;
@@ -245,15 +247,19 @@ h6{
     height: 30px;
     margin: 5px 0px;
 }
-.line-head .dropdown button{
+.line-head .dropdown button.btn-sesion{
     width: 100%;
     height: 30px;
     background-color: transparent;
     color: #ffffff;
     text-align: right;
+    border: 0;
 }
-.line-head .dropdown button:active{
+.line-head .dropdown button.btn-sesion:active,
+.line-head .dropdown button.btn-sesion:focus{
+    background-color: transparent;
     outline: none;
+    color: #ffffff;
 }
 .line-head .dropdown-menu{
     width: 100%;
@@ -370,7 +376,7 @@ h6{
 #login .container-fluid{
     padding: 0px 0px 10px 0px;
 }
-#login h5 small{
+#login h4 small{
     color: #757575;
     font-size: .8em;
 }

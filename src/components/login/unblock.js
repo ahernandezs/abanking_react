@@ -1,48 +1,49 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
-class Unblock extends Component {
-  render() {
-    return (
-        <div id="unblock" className="card-block">
+import {    Row, Col,
+            CardBlock, CardTitle } from 'reactstrap';
 
-            <div className="logo-login"></div>
+export default class Unblock extends React.Component {
+    render() {
+        return (
+            <CardBlock id="unblock">
 
-            <div className="row">
-                <div className="col-xs-12">
-                    <h6 className="card-title">Cambio de contraseña / imagen</h6>
-                    <p>
-                        <small>
-                            Es necesario que ingreses tu <strong>usuario</strong> y el <strong>número de folio</strong> que se te entregó vía telefónica.
-                        </small>
-                    </p>
-                </div>
-            </div>
+                <div className="logo-login"></div>
 
-            <div className="row">
-                <div className="col-md-8 offset-md-2">
-                    <input type="password" className="form-control" placeholder="Usuario" />
-                </div>
-            </div>
+                <Row>
+                    <Col xs="12">
+                        <CardTitle>Cambio de contraseña / imagen</CardTitle>
+                        <p>
+                            <small>
+                                Es necesario que ingreses tu <strong>usuario</strong> y el <strong>número de folio</strong> que se te entregó vía telefónica.
+                            </small>
+                        </p>
+                    </Col>
+                </Row>
 
-            <div className="row">
-                <div className="col-md-8 offset-md-2">
-                    <input type="password" className="form-control" placeholder="Número de fólio" />
-                </div>
-            </div>
+                <Row>
+                    <Col md={{ size: 8, offset: 2 }}>
+                        <input type="password" className="form-control" placeholder="Usuario" />
+                    </Col>
+                </Row>
 
-            <div className="row">
-                <div className="col-md-4 offset-md-2">
-                    <Link to="/" activeClassName="active" className="btn btn-cancel btn-block">Cancelar</Link>
-                </div>
-                <div className="col-md-4">
-                    <Link to="/changepass" activeClassName="active" className="btn btn-blue btn-block">Continuar</Link>
-                </div>
-            </div>
+                <Row>
+                    <Col md={{ size: 8, offset: 2 }}>
+                        <input type="password" className="form-control" placeholder="Número de fólio" />
+                    </Col>
+                </Row>
 
-        </div>
-    );
-  }
+                <Row>
+                    <Col md={{ size: 4, offset: 2 }}>
+                        <Link to="/" activeClassName="active" className="btn btn-cancel btn-block">Cancelar</Link>
+                    </Col>
+                    <Col md="4">
+                        <Link to="/changepass" activeClassName="active" className="btn btn-blue btn-block">Continuar</Link>
+                    </Col>
+                </Row>
+
+            </CardBlock>
+        );
+    }
 }
-
-export default Unblock;

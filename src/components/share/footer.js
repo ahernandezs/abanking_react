@@ -1,29 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router';
+
 import Language from './language.js';
 
-class Footer extends React.Component {
+import { Container, Row, Col } from 'reactstrap';
+
+export default class Footer extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            containerFluid: true
+        };
+    }
     render() {
         return (
             <div className="footer">
                 <Language></Language>
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="footer-left col-xs-12 col-sm-7">
+                <Container fluid={this.state.containerFluid}>
+                    <Row>
+                        <Col xs="12" sm="7" className="footer-left">
                             <p>&copy; 2016 Anzen Soluciones S.A. de C.V.</p>
-                        </div>
-                        <div className="footer-right col-xs-12 col-sm-5">
+                        </Col>
+                        <Col xs="12" sm="5" className="footer-right">
                             <p>
                                 <Link to="" activeClassName="active" className="link">Ayuda</Link>
                                 <Link to="" activeClassName="active" className="link">Contácto</Link>
                                 <Link to="" activeClassName="active" className="link">Privacidad</Link>
                             </p>
-                        </div>
-                    </div>
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         );
     }
 }
-
-export default Footer;
