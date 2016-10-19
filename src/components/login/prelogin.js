@@ -1,40 +1,41 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
-class Prelogin extends Component {
-  render() {
-    return (
-        <div id="prelogin" className="card-block">
+import {    Row, Col,
+            CardBlock, CardTitle } from 'reactstrap';
 
-            <div className="logo-login"></div>
+export default class Prelogin extends React.Component {
+    render() {
+        return (
+            <CardBlock id="prelogin">
 
-            <div className="row">
-                <div className="col-xs-12">
-                    <h6 className="card-title">Iniciar sesión</h6>
-                </div>
-            </div>
+                <div className="logo-login"></div>
 
-            <div className="row">
-                <div className="col-md-8 offset-md-2">
-                    <input type="password" className="form-control" placeholder="Usuario" />
-                </div>
-            </div>
+                <Row>
+                    <Col xs="12">
+                        <CardTitle>Iniciar sesión</CardTitle>
+                    </Col>
+                </Row>
 
-            <div className="row">
-                <div className="col-md-8 offset-md-2">
-                    <Link to="/login" activeClassName="active" className="btn btn-blue btn-block">Continuar</Link>
-                </div>
-            </div>
+                <Row>
+                    <Col md={{ size: 8, offset: 2 }}>
+                        <input type="password" className="form-control" placeholder="Usuario" />
+                    </Col>
+                </Row>
 
-            <div className="divider"></div>
+                <Row>
+                    <Col md={{ size: 8, offset: 2 }}>
+                        <Link to="/login" activeClassName="active" className="btn btn-blue btn-block">Continuar</Link>
+                    </Col>
+                </Row>
 
-            <small>
-                <Link to="/unblock" activeClassName="active" className="link">Desbloquear&nbsp;usuario / Olvidé&nbsp;mi&nbsp;contraseña</Link>
-            </small>
+                <div className="divider"></div>
 
-        </div>
-    );
-  }
+                <small>
+                    <Link to="/unblock" activeClassName="active" className="link">Desbloquear&nbsp;usuario / Olvidé&nbsp;mi&nbsp;contraseña</Link>
+                </small>
+
+            </CardBlock>
+        );
+    }
 }
-
-export default Prelogin;

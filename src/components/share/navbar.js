@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-class Navbar extends React.Component {
+export default class Navbar extends React.Component {
     render() {
         return (
             <nav id="navbar" className="navbar navbar-full shadow-second">
@@ -230,5 +230,3 @@ class Navbar extends React.Component {
         );
     }
 }
-
-export default Navbar;
