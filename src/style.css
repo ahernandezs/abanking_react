@@ -205,6 +205,7 @@ h4{
 .btn-language:hover, .btn-language:active, .btn-language:focus{
     background-color: #da4809;
     color: #ffffff;
+    outline: none;
 }
 .btn-ads{
     background-color: #edb72b;
@@ -535,6 +536,22 @@ h4{
     left: 0;
     width: 100%;
 }
+#collapseconf li button{
+    width: 100%;
+    text-align: left;
+    color: #ffffff;
+    background-color: #03A9F4;
+}
+#collapseconf li button small{
+    display: none;
+}
+#collapseconf li button span{
+    margin-right: 5px;
+}
+#collapseconf li button:hover, #collapseconf li button:focus{
+    outline: none;
+    background-color: #07a0e7;
+}
 #navbar .navbar-nav .nav-item {
     float: none;
 }
@@ -681,6 +698,23 @@ h4{
 #men .largo div:nth-child(7) a p{
     padding-top: 12px;
 }
+#men .largo div:nth-child(7) button{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.17em;
+    text-align: left;
+    color: #212121;
+}
+#men .largo div:nth-child(7) button small{
+    font-size: 75%;
+}
+@media (min-width: 768px) {
+    #men .largo div:nth-child(7) button span{
+        display: none;
+    }
+}
 #men .corto div:nth-child(3) a p{
     padding-top: 5px;
 }
@@ -716,15 +750,13 @@ h4{
  * Modal for language
  * ========================================================================== */
 
-#language .modal-header{
-    border: none;
-}
-#language .container{
-    padding-bottom: 10px;
-}
-#language p{
+.txt-modal{
+    font-size: .9em;
     padding: 5px 0px 15px;
     color: #212121;
+}
+.txt-modal + div{
+    padding-bottom: 20px;
 }
 
 /*
@@ -841,14 +873,20 @@ h4{
     float: right;
     font-size: 1em;
 }
+.credit-card table tr td div.form-check,
+.credit-card table tr th div.form-check,
+.credit-card table tr td div.form-check label,
+.credit-card table tr th div.form-check label{
+    margin: 0;
+    padding: 0;
+}
 .credit-card input[type="radio"]{
     display: none;
-
 }
 .credit-card label {
     margin: 0;
 }
-.credit-card input[type="radio"] + label span {
+.credit-card input[type="radio"] + span {
     background-color: #e3e3e3;
     display: inline-block;
     width: 15px;
@@ -857,8 +895,9 @@ h4{
     vertical-align: middle;
     margin-right: 5px;
     cursor:pointer;
+    margin-top: -4px;
 }
-.credit-card input[type="radio"]:checked + label span {
+.credit-card input[type="radio"]:checked + span {
     background-color: #edb72b;
     border: 3px solid #e3e3e3;
 }
@@ -1018,21 +1057,27 @@ h4{
 #publicity{
     margin-top: 40px;
 }
-#publicity .row {
-    padding-top: 8px;
+@media (min-width: 544px) and (max-width: 991px){
+    #publicity div:nth-child(3){
+        display: none;
+    }
 }
 #publicity .card-block {
     margin: 0;
     padding: 0;
 }
-#publicity a {
+#publicity img{
+    border-radius: 4px;
+}
+#publicity button {
     position: absolute;
     margin-top: -40px;
     margin-left: 10px;
 }
-#publicity .btn-secondary {
+#publicity .btn-adsb {
     background-color: #1b1b1b;
 }
-#publicity .btn-secondary:hover {
+#publicity .btn-adsb:hover, #publicity .btn-adsb:focus {
+    outline: none;
     background-color: #000000;
 }

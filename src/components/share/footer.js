@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import Language from './language.js';
-
 import { Container, Row, Col } from 'reactstrap';
 
 export default class Footer extends React.Component {
@@ -16,7 +14,6 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div className="footer">
-                <Language></Language>
                 <Container fluid={this.state.containerFluid}>
                     <Row>
                         <Col xs="12" sm="7" className="footer-left">

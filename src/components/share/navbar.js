@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import Language from './language.js';
+
 export default class Navbar extends React.Component {
     render() {
         return (
@@ -129,7 +131,6 @@ export default class Navbar extends React.Component {
                                                 <div className="globo-cont">
                                                     <div><span className="icon-alarm"></span></div>
                                                     <div>
-                                                        <a href="#set"></a>
                                                         <Link to="/accounts" activeClassName="active">
                                                             <p>
                                                                 Alertas y notificaciones<br />
@@ -141,14 +142,7 @@ export default class Navbar extends React.Component {
                                                 <div className="divider"></div>
                                                 <div className="globo-cont">
                                                     <div><span className="icon-earth"></span></div>
-                                                    <div>
-                                                        <a href="#language" data-toggle="modal">
-                                                            <p>
-                                                                Idioma<br />
-                                                                <small>Seleccione el idioma de su preferencia.</small>
-                                                            </p>
-                                                        </a>
-                                                    </div>
+                                                    <Language></Language>
                                                 </div>
                                             </div>
                                         </div>
@@ -206,7 +200,7 @@ export default class Navbar extends React.Component {
                                     <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-alarm"></span>&nbsp;Alertas y notificaciones</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="#language" data-toggle="modal" className="btn btn-navbar-vertical"><span className="icon-earth"></span>&nbsp;Idiomas</a>
+                                    <Language></Language>
                                 </li>
                             </ul>
                         </div>

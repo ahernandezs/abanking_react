@@ -1,34 +1,45 @@
 import React from 'react';
+import { Container, Row, Col, Button, Modal, ModalHeader } from 'reactstrap';
 
-class Language extends React.Component {
+export default class Language extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            modal: false
+        };
+
+        this.toggle = this.toggle.bind(this);
+    }
+    toggle() {
+        this.setState({
+            modal: !this.state.modal
+        });
+    }
     render() {
         return (
-            <div id="language" className="modal fade" tabIndex="-1" role="dialog" aria-labelledby="language" aria-hidden="true">
-                <div className="modal-dialog modal-sm">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h5 className="modal-title">Idioma</h5>
-                        </div>
-                        <div className="container">
-                            <div className="divider"></div>
-                            <p>Seleccione el idioma de su preferencia.</p>
-                            <div className="row">
-                                <div className="col-xs-6">
-                                    <button type="button" className="btn btn-language btn-block" data-dismiss="modal">Español</button>
-                                </div>
-                                <div className="col-xs-6">
-                                    <button type="button" className="btn btn-language btn-block" data-dismiss="modal">Inglés</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <Button color="lngmenu" onClick={this.toggle}>
+                    <span className="icon-earth"></span>Idioma <br />
+                    <small>Seleccione el idioma de su preferencia.</small>
+                </Button>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} size="sm">
+                    <ModalHeader toggle={this.toggle}>
+                        Idioma
+                    </ModalHeader>
+                    <Container>
+                        <p className="txt-modal">Seleccione el idioma de su preferencia.</p>
+                        <Row>
+                            <Col xs="6">
+                                <Button color="language" block onClick={this.toggle}>Español</Button>
+                            </Col>
+                            <Col xs="6">
+                                <Button color="language" block onClick={this.toggle}>Inglés</Button>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Modal>
             </div>
         );
     }
 }
-
-export default Language;
