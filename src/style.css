@@ -570,7 +570,7 @@ h4{
     background-color: #07a0e7;
 }
 @media (min-width: 38em) {
-    #navbar .btn-navbar-vertical{
+    #navbar .btn-navbar-vertical, #collapseconf li button{
         padding-left: 4px;
     }
 }
