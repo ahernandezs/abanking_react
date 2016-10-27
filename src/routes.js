@@ -13,6 +13,9 @@ import Changepass from './components/login/changepass.js';
 
 //home
 import Accounts from './components/home/account/accounts.js';
+import TableDetail from './components/home/accountDetail/table-detail.js';
+import GeneralDetail from './components/home/accountDetail/general-detail.js';
+import TransactionDetail from './components/home/accountDetail/transaction-detail.js';
 
 export default (
 	<Router history={hashHistory}>
@@ -24,6 +27,10 @@ export default (
 		</Route>
 		<Route component={LayoutHome}>
 			<Route path="/accounts" component={Accounts} />
+			<Route component={TableDetail}>
+				<Route path="/generalDetail" component={GeneralDetail} />
+				<Route path="/transactionDetail" component={TransactionDetail} />
+			</Route>
 		</Route>
 	</Router>
 );
