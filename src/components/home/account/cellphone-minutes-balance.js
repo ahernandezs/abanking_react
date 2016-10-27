@@ -52,7 +52,7 @@ export default class Balance extends React.Component {
                                         </Col>
                                         <Col xs="12" sm="6">
                                             <p className="label">Cantidad a cargar</p>
-                                            <input type="text" className="form-control form-control-sm" placeholder="Importe" />
+                                            <Input size="sm" placeholder="Importe" />
                                         </Col>
                                         <Col xs="12" sm="6">
                                             <Link to="/accounts" activeClassName="active" className="btn btn-block btn-sm btn-confirm">Confirmar</Link>

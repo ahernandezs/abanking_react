@@ -96,7 +96,7 @@ export default class SlideAccount extends React.Component {
                                         <Container>
                                             <Row>
                                                 <Col xs="12">
-                                                    <Link to="/accounts" activeClassName="active" className="link">Ver más</Link>
+                                                    <Link to="/generalDetail" activeClassName="active" className="link">Ver más</Link>
                                                 </Col>
                                             </Row>
                                         </Container>
@@ -172,7 +172,7 @@ export default class SlideAccount extends React.Component {
                                                             </FormGroup>
                                                         </td>
                                                         <td>
-                                                            <input type="text" className="form-control" placeholder="$ 0.00" />
+                                                            <Input placeholder="$ 0.00" />
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -262,7 +262,7 @@ export default class SlideAccount extends React.Component {
                                                             </FormGroup>
                                                         </td>
                                                         <td>
-                                                            <input type="text" className="form-control" placeholder="$ 0.00" />
+                                                            <Input placeholder="$ 0.00" />
                                                         </td>
                                                     </tr>
                                                 </tbody>
