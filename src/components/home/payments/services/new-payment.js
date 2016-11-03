@@ -25,6 +25,8 @@ class Servicetopay extends React.Component{
                 </Alert>
                 <Row>
                     <Col xs="12" sm="5" md="4">
+                        <p className="label">Mis servicios</p>
+                        <Link to="/NewPayment" activeClassName="active" ><span className="icon-user-plus"></span></Link>
                         <Slidemyservice></Slidemyservice>
                     </Col>
                     <Col xs="12" sm="7" md="8">
