@@ -3,6 +3,20 @@ import { Link } from 'react-router';
 
 import Language from './language.js';
 
+var Boot = React.createClass({
+    close: function(){
+      var ob = this.refs.icme;
+      ob.click();
+    },
+    render: function(){
+        return(
+            <div data-target="#collapsemenu" data-toggle="collapse">
+                <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical" onClick={this.close}>Cuentas</Link>
+            </div>
+        );
+    }
+});
+
 export default class Navbar extends React.Component {
     render() {
         return (
@@ -10,7 +24,7 @@ export default class Navbar extends React.Component {
                 <div className="container panel">
 
                     <div className="navbar-brand logo-abanking hidden-sm-down"></div>
-                    <button className="hidden-md-up"                data-target="#collapsemenu" data-toggle="collapse" type="button" aria-expanded="false" aria-controls="collapsemenu" data-parent="#navbar">&#9776;</button>
+                    <button ref="icme" className="hidden-md-up"                data-target="#collapsemenu" data-toggle="collapse" type="button" aria-expanded="false" aria-controls="collapsemenu" data-parent="#navbar">&#9776;</button>
                     <button className="hidden-md-up pull-xs-right"  data-target="#collapsecont" data-toggle="collapse" type="button" aria-expanded="false" aria-controls="collapsecont" data-parent="#navbar"><span className="icon-headphones"></span></button>
                     <button className="hidden-md-up pull-xs-right"  data-target="#collapseconf" data-toggle="collapse" type="button" aria-expanded="false" aria-controls="collapseconf" data-parent="#navbar"><span className="icon-gear"></span></button>
 
@@ -29,8 +43,8 @@ export default class Navbar extends React.Component {
                                     </button>
                                     <div className="pay dropdown-menu dropdown-menu-left shadow-tertiary" aria-labelledby="navbar-pagos">
                                         <ul>
-                                            <li><Link to="/accounts" activeClassName="active" className="btn btn-navbar"><span className="icon-basket"></span>&nbsp;&nbsp;Pago de servicios</Link></li>
-                                            <li><Link to="/accounts" activeClassName="active" className="btn btn-navbar"><span className="icon-credit-card"></span>&nbsp;&nbsp;Pago de créditos</Link></li>
+                                            <li><Link to="/newPayment" activeClassName="active" className="btn btn-navbar"><span className="icon-basket"></span>&nbsp;&nbsp;Pago de servicios</Link></li>
+                                            <li><Link to="/newCreditPayment" activeClassName="active" className="btn btn-navbar"><span className="icon-credit-card"></span>&nbsp;&nbsp;Pago de créditos</Link></li>
                                             <li><Link to="/accounts" activeClassName="active" className="btn btn-navbar"><span className="icon-dollar"></span>&nbsp;&nbsp;Pago de Impuestos</Link></li>
                                         </ul>
                                     </div>
@@ -157,7 +171,7 @@ export default class Navbar extends React.Component {
                         <div className="container">
                             <ul className="nav navbar-nav">
                                 <li className="nav-item">
-                                    <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical">Cuentas</Link>
+                                    <Boot></Boot>
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical">Inversiones</Link>
@@ -165,8 +179,8 @@ export default class Navbar extends React.Component {
                                 <li className="nav-item">
                                     <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical">Pagos</Link>
                                     <ul className="nav-second nav navbar-nav">
-                                        <li className="nav-item"><Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-basket"></span>&nbsp;&nbsp;Pago de servicios</Link></li>
-                                        <li className="nav-item"><Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-credit-card"></span>&nbsp;&nbsp;Pago de créditos</Link></li>
+                                        <li className="nav-item"><Link to="/newPayment" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-basket"></span>&nbsp;&nbsp;Pago de servicios</Link></li>
+                                        <li className="nav-item"><Link to="/newCreditPayment" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-credit-card"></span>&nbsp;&nbsp;Pago de créditos</Link></li>
                                         <li className="nav-item"><Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-dollar"></span>&nbsp;&nbsp;Pago de impuestos</Link></li>
                                     </ul>
                                 </li>

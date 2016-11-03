@@ -14,6 +14,7 @@
  .secondary-text-link           { color: #000000; }
  .divider-color                 { border-color: #BDBDBD; }
  .head                          { background: #f1f1f1; }
+ .head-morethan                 { background: #f7f7f7; }
  .footer                        { background: #e3e3e3; }
  .btn-blue:hover                { background: #079fe4; }
  .btn-cancel                    { background: #607d8b; }
@@ -25,17 +26,19 @@
  .btn-ads                       { background-color: #edb72b; }
  .link-second                   { color: #0275d8; }
  .link-second:hover             { color: #0661af; }
+ .border-blue                   { background: #039be5; }
+
 /*
  * Fonts
  * ========================================================================== */
 
  @font-face {
    font-family: 'icomoon';
-   src:  url('./fonts/icomoon.eot?fepa8z');
-   src:  url('./fonts/icomoon.eot?fepa8z#iefix') format('embedded-opentype'),
-     url('./fonts/icomoon.ttf?fepa8z') format('truetype'),
-     url('./fonts/icomoon.woff?fepa8z') format('woff'),
-     url('./fonts/icomoon.svg?fepa8z#icomoon') format('svg');
+   src:  url('./fonts/icomoon.eot?d0gj38');
+   src:  url('./fonts/icomoon.eot?d0gj38#iefix') format('embedded-opentype'),
+     url('./fonts/icomoon.ttf?d0gj38') format('truetype'),
+     url('./fonts/icomoon.woff?d0gj38') format('woff'),
+     url('./fonts/icomoon.svg?d0gj38#icomoon') format('svg');
    font-weight: normal;
    font-style: normal;
  }
@@ -88,11 +91,17 @@
  .icon-location:before {
    content: "\e903";
  }
+ .icon-calendar:before {
+   content: "\e910";
+ }
  .icon-phone:before {
    content: "\e904";
  }
  .icon-headphones:before {
    content: "\e905";
+ }
+ .icon-user-plus:before {
+   content: "\e973";
  }
  .icon-file:before {
    content: "\e90f";
@@ -121,12 +130,18 @@
  .icon-globe:before {
    content: "\e90b";
  }
+ .icon-angle-up:before {
+   content: "\f106";
+ }
+ .icon-angle-down:before {
+   content: "\f107";
+ }
 
 /*
  * General
  * ========================================================================== */
 
-html, body, #root, .div-cont{
+html, body, #root, .div-cont {
     height: 100%;
     width: 100%;
     color: #212121;
@@ -1365,3 +1380,177 @@ div#GeneralDetail, div#TransactionDetail{
 #TransactionDetail div:nth-child(5) span{
     font-weight: 600;
 }
+
+/*
+ * Payments
+ * ========================================================================== */
+
+#PaymentService{
+    padding-top: 20px;
+    width: 100%;
+    min-height: 100%;
+}
+#PaymentService .generalTitle{
+    line-height: 1;
+    width: 100%;
+    height: 40px;
+    font-size: .9em;
+    border-bottom: 2px dotted #BDBDBD;
+    margin-bottom: 20px;
+}
+@media (max-width: 543px) {
+    #PaymentService .generalTitle{
+        height: 50px;
+    }
+}
+#PaymentService .generalTitle p:before{
+    content: "\e900";
+    font-family: 'icomoon' !important;
+    margin-right: 10px;
+    color: #009688;
+}
+#PaymentService .generalTitle small{
+    color: #757575;
+    font-size: .7em;
+}
+#PaymentService .rc-collapse, #PaymentService .menu{
+    min-height: 38px;
+    border-radius: 0;
+    border: 0;
+    border-top: 4px solid #039be5;
+    background-color: #f7f7f7;
+}
+#PaymentService .rc-collapse-content-box,
+#PaymentService .rc-collapse-content{
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+#PaymentService .rc-collapse-content-box a{
+    width: 100%;
+    display: inline-block;
+    padding: 4px 16px;
+    color: #212121;
+    text-decoration: none;
+}
+#PaymentService .rc-collapse-content-box a:hover,
+#PaymentService .rc-collapse-content-box a:focus{
+    color: #000000;
+    background-color: #f1f1f1;
+}
+#PaymentService .menu{
+    height: 38px;
+}
+#PaymentService .menu a{
+    height: 34px;
+    display: inline-block;
+    padding: 4px 20px;
+    color: #212121;
+    text-decoration: none;
+}
+#PaymentService .menu a:hover,
+#PaymentService .menu a:focus{
+    color: #000000;
+}
+#PaymentService div.cont-payment{
+    width: 100%;
+    min-height: 100%;
+    padding: 5px;
+    border: 1px solid #f1f1f1;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+#PaymentService .alert{
+    margin-top: 10px;
+    text-align: center;
+    padding: 2px;
+    font-size: .9em;
+}
+#PaymentService .alert + a{
+    max-width: 200px;
+    display: block;
+    margin: 80px auto;
+}
+#PaymentService .alert + a:before{
+    content: "\e973";
+    font-family: 'icomoon' !important;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/*
+ * Service to pay
+ * ========================================================================== */
+
+#Servicetopay .form-control{
+    height: 28px;
+}
+#Servicetopay div:nth-child(2) div:nth-child(2) div div p{
+    padding: 0;
+    margin: 0;
+    color: #0275d8;
+    font-weight: 600;
+    font-size: .8em;
+}
+#Servicetopay > div:nth-child(2) > div:nth-child(2) > div > div{
+    margin-bottom: 30px;
+}
+#Servicetopay > div:nth-child(3) > div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+    #Servicetopay > div:nth-child(2) > div:nth-child(2) > div > div{
+        margin-bottom: 15px;
+    }
+}
+
+/*
+ * Service to pay >> services
+ * ========================================================================== */
+
+
+
+/*#slideservice .slick-prev, #slideservice .slick-next{
+    width: 25px;
+    height: 118px;
+    position: relative;
+    background-color: #f7f7f7;
+}
+#slideservice .slick-prev{
+    float: right;
+    left: 25px;
+    top: 59px;
+    border-top-right-radius: 4px;
+    border-bottom: 2px solid #e3e3e3;
+    -webkit-box-shadow: 0px 0px 5px -2px rgba(87,87,87,1);
+    -moz-box-shadow: 0px 0px 5px -2px rgba(87,87,87,1);
+    box-shadow: 0px 0px 5px -2px rgba(87,87,87,1);
+}
+#slideservice .slick-next{
+    float: right;
+    right: -50px;
+    top: 125px;
+    border-bottom-right-radius: 4px;
+    -webkit-box-shadow: 0px 0px 5px -2px rgba(87,87,87,1);
+    -moz-box-shadow: 0px 0px 5px -2px rgba(87,87,87,1);
+    box-shadow: 0px 0px 5px -2px rgba(87,87,87,1);
+}
+#slideservice .slick-prev:before{
+    color: #009688;
+    content: "\f106";
+    font-family: 'icomoon' !important;
+}
+#slideservice .slick-next:before{
+    color: #009688;
+    content: "\f107";
+    font-family: 'icomoon' !important;
+}
+#slideservice .slick-track{
+    width: 100%;
+    background-color: rgb(200, 163, 30);
+}
+#slideservice .myservice{
+    background-color: rgb(88, 60, 187);
+    width: 90%;
+}*/
