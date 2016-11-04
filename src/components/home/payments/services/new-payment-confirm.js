@@ -21,7 +21,7 @@ export default class NewPaymentConfirmation extends React.Component{
                                 <p className="label">Servicio seleccionado</p>
                                 <div className="label-conf">
                                     <strong>Izzi Telecom</strong><br />
-                                    <small>Internet Casa</small>
+                                    <small>TV Casa</small>
                                 </div>
                             </Col>
                             <Col xs="12" sm="6">
