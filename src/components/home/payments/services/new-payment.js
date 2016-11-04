@@ -7,12 +7,12 @@ import { Alert, Container, Row, Col, Input, InputGroupAddon, InputGroup } from '
 class NoService extends React.Component{
     render(){
         return(
-            <div>
+            <Container>
                 <Alert color="warning">
                     Actualmente no cuentas con servicios para realizar un pago.
                 </Alert>
                 <Link to="/NewPayment" activeClassName="active" className="btn btn-blue">Agregar servicio</Link>
-            </div>
+            </Container>
         );
     }
 }
@@ -58,10 +58,10 @@ class Servicetopay extends React.Component{
                 </Row>
                 <Row>
                     <Col xs="6" sm={{ size: 4, offset: 4}} md={{ size: 3, offset: 6 }} lg={{ size: 2, offset: 8}}>
-                        <Link to="/" activeClassName="active" className="btn btn-cancel btn-block">Cancelar</Link>
+                        <Link to="/newPayment" activeClassName="active" className="btn btn-cancel btn-block">Cancelar</Link>
                     </Col>
                     <Col xs="6" sm="4" md="3" lg="2">
-                        <Link to="/accounts" activeClassName="active" className="btn btn-blue btn-block">Siguiente</Link>
+                        <Link to="/newConfirm" activeClassName="active" className="btn btn-blue btn-block">Siguiente</Link>
                     </Col>
                 </Row>
             </Container>
