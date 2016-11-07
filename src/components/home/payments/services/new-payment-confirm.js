@@ -55,7 +55,7 @@ export default class NewPaymentConfirmation extends React.Component{
                         <Link to="/newPayment" activeClassName="active" className="btn btn-cancel btn-block">Cancelar</Link>
                     </Col>
                     <Col xs="6" sm="4" md="3" lg="2">
-                        <Link to="/accounts" activeClassName="active" className="btn btn-confirm btn-block">Confirmar</Link>
+                        <Link to="/newPayment" activeClassName="active" className="btn btn-confirm btn-block">Confirmar</Link>
                     </Col>
                 </Row>
             </Container>

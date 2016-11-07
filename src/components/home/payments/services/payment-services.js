@@ -35,8 +35,8 @@ const payment = React.createClass({
                 <div className="hidden-sm-down">
                     <div className="menu">
                         <Link to="/NewPayment" activeClassName="active">Nuevo pago</Link>
-                        <Link to="/NewPayment" activeClassName="active">Pagos anteriores</Link>
-                        <Link to="/NewPayment" activeClassName="active">Pagos programados</Link>
+                        <Link to="/previousPayment" activeClassName="active">Pagos anteriores</Link>
+                        <Link to="/scheduledPay" activeClassName="active">Pagos programados</Link>
                         <Link to="/NewPayment" activeClassName="active">Servicios</Link>
                     </div>
                 </div>
@@ -44,8 +44,8 @@ const payment = React.createClass({
                     <Collapse accordion onChange={this.onChange} activeKey={activeKey}>
                         <Panel header="Opciones de pago" key="1">
                             <Link to="/NewPayment" activeClassName="active" onClick={this.setActivityKey}>Nuevo pago</Link>
-                            <Link to="/NewPayment" activeClassName="active" onClick={this.setActivityKey}>Pagos anteriores</Link>
-                            <Link to="/NewPayment" activeClassName="active" onClick={this.setActivityKey}>Pagos programados</Link>
+                            <Link to="/previousPayment" activeClassName="active" onClick={this.setActivityKey}>Pagos anteriores</Link>
+                            <Link to="/scheduledPay" activeClassName="active" onClick={this.setActivityKey}>Pagos programados</Link>
                             <Link to="/NewPayment" activeClassName="active" onClick={this.setActivityKey}>Servicios</Link>
                         </Panel>
                     </Collapse>

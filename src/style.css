@@ -34,11 +34,11 @@
 
  @font-face {
    font-family: 'icomoon';
-   src:  url('fonts/icomoon.eot?8rya97');
-   src:  url('fonts/icomoon.eot?8rya97#iefix') format('embedded-opentype'),
-     url('fonts/icomoon.ttf?8rya97') format('truetype'),
-     url('fonts/icomoon.woff?8rya97') format('woff'),
-     url('fonts/icomoon.svg?8rya97#icomoon') format('svg');
+   src:  url('./fonts/icomoon.eot?7rn9ej');
+   src:  url('./fonts/icomoon.eot?7rn9ej#iefix') format('embedded-opentype'),
+     url('./fonts/icomoon.ttf?7rn9ej') format('truetype'),
+     url('./fonts/icomoon.woff?7rn9ej') format('woff'),
+     url('./fonts/icomoon.svg?7rn9ej#icomoon') format('svg');
    font-weight: normal;
    font-style: normal;
  }
@@ -91,9 +91,6 @@
  .icon-location:before {
    content: "\e903";
  }
- .icon-calendar:before {
-   content: "\e910";
- }
  .icon-phone:before {
    content: "\e904";
  }
@@ -106,6 +103,9 @@
  .icon-file:before {
    content: "\e90f";
  }
+ .icon-cancel2:before {
+   content: "\e910";
+ }
  .icon-notice:before {
    content: "\e906";
  }
@@ -117,6 +117,9 @@
  }
  .icon-alarm:before {
    content: "\e907";
+ }
+ .icon-pen:before {
+   content: "\e911";
  }
  .icon-loop:before {
    content: "\e908";
@@ -194,6 +197,7 @@ h4{
     color: #0275d8;
     font-weight: 600;
     margin-bottom: 4px;
+    font-size: .8em;
 }
 .label-conf{
     width: 100%;
@@ -202,6 +206,29 @@ h4{
     line-height: 1;
     color: #757575;
 }
+.normalTable thead tr th{
+    font-size: .9em;
+    min-width: 120px;
+    cursor: pointer;
+}
+.normalTable thead tr th:after{
+    content: "\f05b";
+    font-family: 'icomoon' !important;
+    margin-left: 8px;
+    font-size: .8em;
+}
+.normalTable tbody tr td{
+    font-size: .85em;
+}
+.normalTable tbody tr td:nth-child(4) small{
+    font-weight: bolder;
+    margin-left: 5px;
+}
+.alert-success span{
+    position: relative;
+    right: 20px;
+}
+
 /*
  * Buttons
  * ========================================================================== */
@@ -277,6 +304,18 @@ h4{
 .btn-search:hover, .btn-search:active, .btn-search:focus{
     background-color: #038b7e;
     color: #ffffff;
+}
+.btn-freeico{
+    background-color: transparent;
+    color: #0275d8;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+}
+.btn-freeico:hover, .btn-freeico:active, .btn-freeico:focus{
+    color: #0661af;
+    outline: none !important;
 }
 
 /*
@@ -1477,9 +1516,10 @@ div#GeneralDetail, div#TransactionDetail{
     border: 1px solid #f1f1f1;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 #PaymentService .alert{
-    margin-top: 10px;
     text-align: center;
     padding: 2px;
     font-size: .9em;
@@ -1503,16 +1543,12 @@ div#GeneralDetail, div#TransactionDetail{
 #Servicetopay .form-control{
     height: 28px;
 }
-#Servicetopay .label{
-    font-size: .8em;
-}
 #Servicetopay > div:nth-child(2) > div:nth-child(2) > div > div{
     margin-bottom: 30px;
 }
 #Servicetopay > div:nth-child(3) > div,
 #newPayConfirm > div:nth-child(3) > div{
     margin-top: 30px;
-    margin-bottom: 20px;
 }
 @media (max-width: 767px) {
     #Servicetopay > div:nth-child(2) > div:nth-child(2) > div > div{
@@ -1613,9 +1649,6 @@ div#GeneralDetail, div#TransactionDetail{
  * Service to pay >> confirm
  * ========================================================================== */
 
-#newPayConfirm .label{
-    font-size: .8em;
-}
 #newPayConfirm div.card img{
     display: block;
     margin: 10px auto;
@@ -1625,4 +1658,72 @@ div#GeneralDetail, div#TransactionDetail{
     #newPayConfirm div.card img{
         margin-bottom: 50px;
     }
+}
+
+/*
+ * Service to pay >> previouspay
+ * ========================================================================== */
+
+#previouspay .normalTable{
+    margin-top: 30px;
+}
+#previouspay .normalTable tbody tr td:nth-child(3),
+#scheduledpay .normalTable tbody tr td:nth-child(3){
+    color: #000000;
+    min-width: 280px;
+}
+#previouspay .normalTable tbody tr td:nth-child(4),
+#scheduledpay .normalTable tbody tr td:nth-child(4){
+    color: #75a83e;
+    min-width: 150px;
+}
+#scheduledpay .normalTable tbody tr td:nth-child(5) div{
+    display: inline-block;
+    margin-left: 10px;
+}
+/*
+ * Service to pay >> scheduledpay
+ * ========================================================================== */
+
+#scheduledpay .normalTable thead tr th:nth-child(5){
+    width: 100px;
+    cursor: default;
+}
+#scheduledpay .normalTable thead tr th:nth-child(5):after{
+    content: "";
+}
+
+/*
+ * Service to pay >> scheduledpayedit
+ * ========================================================================== */
+
+div.cardup{
+    margin: 30px auto;
+}
+div.cardup .label-conf{
+    height: 95px;
+}
+div.cardup .label{
+    margin-top: 20px;
+}
+div.cardup div:nth-child(1) > .label,
+div.cardup div:nth-child(2) > .label{
+    margin-top: 0px;
+}
+@media (max-width: 543px) {
+    div.cardup div:nth-child(2) > .label{
+        margin-top: 20px;
+    }
+}
+div.cardup > div{
+    margin-top: 30px;
+}
+div.cardup .card{
+    height: 100%;
+    text-align: center;
+}
+div.cardup .card img{
+    height: 55px;
+    display: block;
+    margin: auto;
 }

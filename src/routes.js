@@ -21,6 +21,8 @@ import TransactionDetail from './components/home/accountDetail/transaction-detai
 import PaymentServices2 from './components/home/payments/services/payment-services.js';
 import NewPayment from './components/home/payments/services/new-payment.js';
 import NewPaymentConfirmation from './components/home/payments/services/new-payment-confirm.js';
+import PreviousPay from './components/home/payments/services/previous-payments.js';
+import ScheduledPay from './components/home/payments/services/scheduledpay.js';
 //Payments-credit
 import PaymentCredit from './components/home/payments/credit/payment-credit.js';
 import NewPaymentc from './components/home/payments/credit/new-paymentc.js';
@@ -42,6 +44,8 @@ export default (
 			<Route component={PaymentServices2}>
 				<Route path="/newPayment" component={NewPayment} />
 				<Route path="/newConfirm" component={NewPaymentConfirmation}/>
+				<Route path="/previousPayment" component={PreviousPay} />
+				<Route path="/scheduledPay" component={ScheduledPay} />
 			</Route>
 			<Route component={PaymentCredit}>
 				<Route path="/newCreditPayment" component={NewPaymentc} />
