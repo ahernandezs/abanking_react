@@ -17,6 +17,16 @@ import TableDetail from './components/home/accountDetail/table-detail.js';
 import GeneralDetail from './components/home/accountDetail/general-detail.js';
 import TransactionDetail from './components/home/accountDetail/transaction-detail.js';
 
+//Payments-services
+import PaymentServices2 from './components/home/payments/services/payment-services.js';
+import NewPayment from './components/home/payments/services/new-payment.js';
+import NewPaymentConfirmation from './components/home/payments/services/new-payment-confirm.js';
+import PreviousPay from './components/home/payments/services/previous-payments.js';
+import ScheduledPay from './components/home/payments/services/scheduledpay.js';
+//Payments-credit
+import PaymentCredit from './components/home/payments/credit/payment-credit.js';
+import NewPaymentc from './components/home/payments/credit/new-paymentc.js';
+
 export default (
 	<Router history={hashHistory}>
 		<Route component={LayoutLogin}>
@@ -30,6 +40,15 @@ export default (
 			<Route component={TableDetail}>
 				<Route path="/generalDetail" component={GeneralDetail} />
 				<Route path="/transactionDetail" component={TransactionDetail} />
+			</Route>
+			<Route component={PaymentServices2}>
+				<Route path="/newPayment" component={NewPayment} />
+				<Route path="/newConfirm" component={NewPaymentConfirmation}/>
+				<Route path="/previousPayment" component={PreviousPay} />
+				<Route path="/scheduledPay" component={ScheduledPay} />
+			</Route>
+			<Route component={PaymentCredit}>
+				<Route path="/newCreditPayment" component={NewPaymentc} />
 			</Route>
 		</Route>
 	</Router>

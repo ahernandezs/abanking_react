@@ -14,6 +14,7 @@
  .secondary-text-link           { color: #000000; }
  .divider-color                 { border-color: #BDBDBD; }
  .head                          { background: #f1f1f1; }
+ .head-morethan                 { background: #f7f7f7; }
  .footer                        { background: #e3e3e3; }
  .btn-blue:hover                { background: #079fe4; }
  .btn-cancel                    { background: #607d8b; }
@@ -25,17 +26,19 @@
  .btn-ads                       { background-color: #edb72b; }
  .link-second                   { color: #0275d8; }
  .link-second:hover             { color: #0661af; }
+ .border-blue                   { background: #039be5; }
+
 /*
  * Fonts
  * ========================================================================== */
 
  @font-face {
    font-family: 'icomoon';
-   src:  url('./fonts/icomoon.eot?fepa8z');
-   src:  url('./fonts/icomoon.eot?fepa8z#iefix') format('embedded-opentype'),
-     url('./fonts/icomoon.ttf?fepa8z') format('truetype'),
-     url('./fonts/icomoon.woff?fepa8z') format('woff'),
-     url('./fonts/icomoon.svg?fepa8z#icomoon') format('svg');
+   src:  url('./fonts/icomoon.eot?7rn9ej');
+   src:  url('./fonts/icomoon.eot?7rn9ej#iefix') format('embedded-opentype'),
+     url('./fonts/icomoon.ttf?7rn9ej') format('truetype'),
+     url('./fonts/icomoon.woff?7rn9ej') format('woff'),
+     url('./fonts/icomoon.svg?7rn9ej#icomoon') format('svg');
    font-weight: normal;
    font-style: normal;
  }
@@ -94,8 +97,14 @@
  .icon-headphones:before {
    content: "\e905";
  }
+ .icon-user-plus:before {
+   content: "\e973";
+ }
  .icon-file:before {
    content: "\e90f";
+ }
+ .icon-cancel2:before {
+   content: "\e910";
  }
  .icon-notice:before {
    content: "\e906";
@@ -109,6 +118,9 @@
  .icon-alarm:before {
    content: "\e907";
  }
+ .icon-pen:before {
+   content: "\e911";
+ }
  .icon-loop:before {
    content: "\e908";
  }
@@ -121,12 +133,24 @@
  .icon-globe:before {
    content: "\e90b";
  }
+ .icon-angle-left:before {
+   content: "\f104";
+ }
+ .icon-angle-right:before {
+   content: "\f105";
+ }
+ .icon-angle-up:before {
+   content: "\f106";
+ }
+ .icon-angle-down:before {
+   content: "\f107";
+ }
 
 /*
  * General
  * ========================================================================== */
 
-html, body, #root, .div-cont{
+html, body, #root, .div-cont {
     height: 100%;
     width: 100%;
     color: #212121;
@@ -166,6 +190,43 @@ div.divider{
 }
 h4{
     font-size: 1.1em;
+}
+.label{
+    padding: 0;
+    margin: 0;
+    color: #0275d8;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: .8em;
+}
+.label-conf{
+    width: 100%;
+    height: 40px;
+    font-size: .9em;
+    line-height: 1;
+    color: #757575;
+}
+.normalTable thead tr th{
+    font-size: .9em;
+    min-width: 120px;
+    cursor: pointer;
+}
+.normalTable thead tr th:after{
+    content: "\f05b";
+    font-family: 'icomoon' !important;
+    margin-left: 8px;
+    font-size: .8em;
+}
+.normalTable tbody tr td{
+    font-size: .85em;
+}
+.normalTable tbody tr td:nth-child(4) small{
+    font-weight: bolder;
+    margin-left: 5px;
+}
+.alert-success span{
+    position: relative;
+    right: 20px;
 }
 
 /*
@@ -243,6 +304,18 @@ h4{
 .btn-search:hover, .btn-search:active, .btn-search:focus{
     background-color: #038b7e;
     color: #ffffff;
+}
+.btn-freeico{
+    background-color: transparent;
+    color: #0275d8;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+}
+.btn-freeico:hover, .btn-freeico:active, .btn-freeico:focus{
+    color: #0661af;
+    outline: none !important;
 }
 
 /*
@@ -1044,7 +1117,6 @@ h4{
     color: #0661af;
 }
 #min-time p.label{
-    font-weight: 600;
     font-size: .75em;
     margin-left: 2px;
     margin-bottom: 2px;
@@ -1364,4 +1436,294 @@ div#GeneralDetail, div#TransactionDetail{
 }
 #TransactionDetail div:nth-child(5) span{
     font-weight: 600;
+}
+
+/*
+ * Payments
+ * ========================================================================== */
+
+#PaymentService{
+    padding-top: 20px;
+    width: 100%;
+    min-height: 100%;
+}
+#PaymentService .generalTitle{
+    line-height: 1;
+    width: 100%;
+    height: 40px;
+    font-size: .9em;
+    border-bottom: 2px dotted #BDBDBD;
+    margin-bottom: 20px;
+}
+@media (max-width: 543px) {
+    #PaymentService .generalTitle{
+        height: 50px;
+    }
+}
+#PaymentService .generalTitle p:before{
+    content: "\e900";
+    font-family: 'icomoon' !important;
+    margin-right: 10px;
+    color: #009688;
+}
+#PaymentService .generalTitle small{
+    color: #757575;
+    font-size: .7em;
+}
+#PaymentService .rc-collapse, #PaymentService .menu{
+    min-height: 38px;
+    border-radius: 0;
+    border: 0;
+    border-top: 4px solid #039be5;
+    background-color: #f7f7f7;
+}
+#PaymentService .rc-collapse-content-box,
+#PaymentService .rc-collapse-content{
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+#PaymentService .rc-collapse-content-box a{
+    width: 100%;
+    display: inline-block;
+    padding: 4px 16px;
+    color: #212121;
+    text-decoration: none;
+}
+#PaymentService .rc-collapse-content-box a:hover,
+#PaymentService .rc-collapse-content-box a:focus{
+    color: #000000;
+    background-color: #f1f1f1;
+}
+#PaymentService .menu{
+    height: 38px;
+}
+#PaymentService .menu a{
+    height: 34px;
+    display: inline-block;
+    padding: 4px 20px;
+    color: #212121;
+    text-decoration: none;
+}
+#PaymentService .menu a:hover,
+#PaymentService .menu a:focus{
+    color: #000000;
+}
+#PaymentService div.cont-payment{
+    width: 100%;
+    min-height: 100%;
+    padding: 5px;
+    border: 1px solid #f1f1f1;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+#PaymentService .alert{
+    text-align: center;
+    padding: 2px;
+    font-size: .9em;
+}
+#PaymentService .alert + a{
+    max-width: 200px;
+    display: block;
+    margin: 80px auto;
+}
+#PaymentService .alert + a:before{
+    content: "\e973";
+    font-family: 'icomoon' !important;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/*
+ * Service to pay
+ * ========================================================================== */
+
+#Servicetopay .form-control{
+    height: 28px;
+}
+#Servicetopay > div:nth-child(2) > div:nth-child(2) > div > div{
+    margin-bottom: 30px;
+}
+#Servicetopay > div:nth-child(3) > div,
+#newPayConfirm > div:nth-child(3) > div{
+    margin-top: 30px;
+}
+@media (max-width: 767px) {
+    #Servicetopay > div:nth-child(2) > div:nth-child(2) > div > div{
+        margin-bottom: 15px;
+    }
+}
+
+/*
+ * Service to pay >> services
+ * ========================================================================== */
+
+#Servicetopay > div:nth-child(2) > div:nth-child(1) > p{
+    margin-left: 18px;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+#Servicetopay > div:nth-child(2) > div:nth-child(1) > p + a{
+    display: inline-block;
+    float: right;
+    margin-right: 18px;
+    font-size: 1.2em;
+    margin-top: -2px;
+    text-decoration: none;
+}
+#Slidemyservice{
+    width: 88%;
+    margin-left: 18px;
+}
+#Slidemyservice div.slick-initialized,
+#Slidemyservice div.slick-list{
+    height: 224px !important;
+    border-top: 2px solid #BDBDBD;
+    border-bottom: 4px solid #BDBDBD;
+}
+@media (max-width: 543px) {
+    #Slidemyservice div.slick-initialized,
+    #Slidemyservice div.slick-list{
+        height: 110px !important;
+        margin-bottom: 30px;
+    }
+}
+#Slidemyservice div.card{
+    height: 100px;
+    border: 1px solid #e3e3e3;
+}
+#Slidemyservice div.card:hover,
+#Slidemyservice div.card:active,
+#Slidemyservice div.card:focus{
+    border: 2px solid #edb72b;
+}
+#Slidemyservice div.card img{
+    width: 58%;
+    margin: 10px auto;
+}
+#Slidemyservice div.card img + div.service-tx,
+#newPayConfirm div.card img + div.service-tx{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+    font-weight: 600;
+    padding-top: 5px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+#Slidemyservice button{
+    margin: 4px;
+}
+#Slidemyservice .slick-prev, #Slidemyservice .slick-next{
+    width: 18px;
+    height: 35px;
+}
+#Slidemyservice .slick-prev:before{
+    color: #009688;
+    content: "\f107";
+    font-family: 'icomoon' !important;
+}
+#Slidemyservice .slick-next:before{
+    color: #009688;
+    content: "\f106";
+    font-family: 'icomoon' !important;
+}
+@media (max-width: 543px) {
+    #Slidemyservice .slick-prev:before{
+        content: "\f104";
+    }
+    #Slidemyservice .slick-next:before{
+        content: "\f105";
+    }
+}
+
+/*
+ * Service to pay >> confirm
+ * ========================================================================== */
+
+#newPayConfirm div.card img{
+    display: block;
+    margin: 10px auto;
+    width: 40%;
+}
+@media (min-width: 767px) {
+    #newPayConfirm div.card img{
+        margin-bottom: 50px;
+    }
+}
+
+/*
+ * Service to pay >> previouspay
+ * ========================================================================== */
+
+#previouspay .normalTable{
+    margin-top: 30px;
+}
+#previouspay .normalTable tbody tr td:nth-child(3),
+#scheduledpay .normalTable tbody tr td:nth-child(3){
+    color: #000000;
+    min-width: 280px;
+}
+#previouspay .normalTable tbody tr td:nth-child(4),
+#scheduledpay .normalTable tbody tr td:nth-child(4){
+    color: #75a83e;
+    min-width: 150px;
+}
+#scheduledpay .normalTable tbody tr td:nth-child(5) div{
+    display: inline-block;
+    margin-left: 10px;
+}
+/*
+ * Service to pay >> scheduledpay
+ * ========================================================================== */
+
+#scheduledpay .normalTable thead tr th:nth-child(5){
+    width: 100px;
+    cursor: default;
+}
+#scheduledpay .normalTable thead tr th:nth-child(5):after{
+    content: "";
+}
+
+/*
+ * Service to pay >> scheduledpayedit
+ * ========================================================================== */
+
+div.cardup{
+    margin: 30px auto;
+}
+div.cardup .label-conf{
+    height: 95px;
+}
+div.cardup .label{
+    margin-top: 20px;
+}
+div.cardup div:nth-child(1) > .label,
+div.cardup div:nth-child(2) > .label{
+    margin-top: 0px;
+}
+@media (max-width: 543px) {
+    div.cardup div:nth-child(2) > .label{
+        margin-top: 20px;
+    }
+}
+div.cardup > div{
+    margin-top: 30px;
+}
+div.cardup .card{
+    height: 100%;
+    text-align: center;
+}
+div.cardup .card img{
+    height: 55px;
+    display: block;
+    margin: auto;
 }
