@@ -37,7 +37,7 @@ const payment = React.createClass({
                         <Link to="/NewPayment" activeClassName="active">Nuevo pago</Link>
                         <Link to="/previousPayment" activeClassName="active">Pagos anteriores</Link>
                         <Link to="/scheduledPay" activeClassName="active">Pagos programados</Link>
-                        <Link to="/NewPayment" activeClassName="active">Servicios</Link>
+                        <Link to="/services" activeClassName="active">Servicios</Link>
                     </div>
                 </div>
                 <div className="hidden-md-up">
@@ -46,7 +46,7 @@ const payment = React.createClass({
                             <Link to="/NewPayment" activeClassName="active" onClick={this.setActivityKey}>Nuevo pago</Link>
                             <Link to="/previousPayment" activeClassName="active" onClick={this.setActivityKey}>Pagos anteriores</Link>
                             <Link to="/scheduledPay" activeClassName="active" onClick={this.setActivityKey}>Pagos programados</Link>
-                            <Link to="/NewPayment" activeClassName="active" onClick={this.setActivityKey}>Servicios</Link>
+                            <Link to="/services" activeClassName="active" onClick={this.setActivityKey}>Servicios</Link>
                         </Panel>
                     </Collapse>
                 </div>

@@ -1,21 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Slidemyservice from './slidemyservices.js';
+import NoService from './noservice.js';
 
 import { Alert, Container, Row, Col, Input, InputGroupAddon, InputGroup } from 'reactstrap';
 
-class NoService extends React.Component{
-    render(){
-        return(
-            <Container>
-                <Alert color="warning">
-                    Actualmente no cuentas con servicios para realizar un pago.
-                </Alert>
-                <Link to="/NewPayment" activeClassName="active" className="btn btn-blue">Agregar servicio</Link>
-            </Container>
-        );
-    }
-}
+
 class Servicetopay extends React.Component{
     render(){
         return(
