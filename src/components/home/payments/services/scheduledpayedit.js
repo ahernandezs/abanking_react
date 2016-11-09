@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button, Modal, ModalHeader, Input, InputGroup, InputGroupAddon, Card } from 'reactstrap';
 import card1 from '../../../../images/services/izzi-min.png';
+import Tooltipi from '../../../share/tool.js';
 
 export default class ScheduledPayEdit extends React.Component {
     constructor(props) {
@@ -58,7 +59,7 @@ export default class ScheduledPayEdit extends React.Component {
                                 <Input size="sm" placeholder="24/09/2016" />
                             </Col>
                             <Col xs="12" sm="6">
-                                <p className="label">Clave dinámica (token)</p>
+                                <p className="label">Clave dinámica (token) <Tooltipi item="Mensaje de token" key="i4" id="i4"/></p>
                                 <Input size="sm" placeholder="000-000" />
                             </Col>
                         </Row>

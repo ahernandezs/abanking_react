@@ -228,6 +228,10 @@ h4{
     position: relative;
     right: 20px;
 }
+.i{
+    margin-left: 5px;
+    color: #757575;
+}
 
 /*
  * Buttons
@@ -1726,4 +1730,92 @@ div.cardup .card img{
     height: 55px;
     display: block;
     margin: auto;
+}
+
+/*
+ * Service to pay >> servicestoadd
+ * ========================================================================== */
+
+#service .label{
+    margin-top: 10px;
+}
+#service .label + p{
+    font-size: .8em;
+    text-align: justify;
+}
+#service > div:nth-child(3),
+#servicestep1 > div:nth-child(3),
+#servicestep2 > div:nth-child(3){
+    margin-top: 20px;
+}
+#service button.btn-blue{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+#service div.card{
+    width: 100%;
+    height: 80px;
+}
+#service div.card:hover,
+#service div.card:focus,
+#service div.card:active{
+    border: 2px solid #edb72b;
+}
+#service img,
+#servicestep1 img,
+#servicestep2 img{
+    max-height: 80%;
+    max-width: 80%;
+    display: block;
+    margin: 8px auto;
+}
+#service > div:nth-child(2){
+    margin-top: -10px;
+}
+#service > div:nth-child(2) > div:first-child{
+    border-right: 2px solid #e3e3e3;
+}
+@media (max-width: 767px) {
+    #service > div:nth-child(2) > div:first-child{
+        border-right: none;
+        border-bottom: 2px solid #e3e3e3;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/*
+ * Service to pay >> services-step1
+ * ========================================================================== */
+
+#servicestep1 > div:nth-child(2){
+    margin-top: -20px;
+}
+#servicestep1 .label{
+    margin-top: 20px;
+}
+#servicestep1 .card,
+#servicestep2 .card{
+    height: 97px;
+}
+
+/*
+ * Service to pay >> services
+ * ========================================================================== */
+
+#servicesadmin > div:nth-child(1) .alert{
+    text-align: left;
+}
+#servicesadmin > div:nth-child(1) a{
+    height: 28px;
+    padding: 0;
+    padding-top: 2px;
+    margin: 0;
+}
+#servicesadmin > div:nth-child(1) a:before{
+    content: "\e973";
+    font-family: 'icomoon' !important;
+    margin-right: 8px;
+    vertical-align: middle;
 }
