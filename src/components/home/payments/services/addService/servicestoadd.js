@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
-import card1 from '../../../../images/services/izzi-min.png';
-import card2 from '../../../../images/services/cfe-min.png';
-import card3 from '../../../../images/services/axtel-min.png';
-import card4 from '../../../../images/services/att-min.png';
-import card5 from '../../../../images/services/telmex-min.png';
-import card6 from '../../../../images/services/total-min.png';
+import card1 from '../../../../../images/services/izzi-min.png';
+import card2 from '../../../../../images/services/cfe-min.png';
+import card3 from '../../../../../images/services/axtel-min.png';
+import card4 from '../../../../../images/services/att-min.png';
+import card5 from '../../../../../images/services/telmex-min.png';
+import card6 from '../../../../../images/services/total-min.png';
 
 import { Alert, Container, Row, Col, Input, InputGroupButton, InputGroup, Button, Card } from 'reactstrap';
 

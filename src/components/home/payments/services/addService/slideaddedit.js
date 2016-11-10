@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Row, Col, Button, Modal, ModalHeader, Input, InputGroup, InputGroupAddon, Card } from 'reactstrap';
-import card1 from '../../../../images/services/izzi-min.png';
-import Tooltipi from '../../../share/tool.js';
+import { Container, Row, Col, Button, Modal, ModalHeader, Input, Card } from 'reactstrap';
+import card1 from '../../../../../images/services/izzi-min.png';
+import Tooltipi from '../../../../share/tool.js';
 
-export default class ScheduledPayEdit extends React.Component {
+export default class SlideAddEdit extends React.Component {
     constructor(props) {
         super(props);
 
@@ -20,13 +20,13 @@ export default class ScheduledPayEdit extends React.Component {
     }
     render() {
         return (
-            <div id="ScheduledPayEdit">
+            <div id="slideaddedit">
                 <Button color="freeico" onClick={this.toggle}>
                     <span className="icon-pen"></span>
                 </Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalHeader toggle={this.toggle}>
-                        Modificar pago programado
+                        Modificar servicio
                     </ModalHeader>
                     <Container className="cardup">
                         <Row>
@@ -35,28 +35,21 @@ export default class ScheduledPayEdit extends React.Component {
                                 <div className="label-conf">
                                     <Card className="shadow-tertiary">
                                         <img src={card1} alt="service" />
-                                        <strong>Izzi Telecom</strong><br />
-                                        <small>TV Casa</small>
+                                        <strong>Izzi Telecom</strong>
                                     </Card>
                                 </div>
                             </Col>
                             <Col xs="12" sm="6">
-                                <p className="label">Monto a pagar</p>
-                                <InputGroup size="sm">
-                                    <Input placeholder="500.00" />
-                                    <InputGroupAddon>MXN</InputGroupAddon>
-                                </InputGroup>
+                                <p className="label">Referencia <Tooltipi item="Mensaje de Referencia" key="i6" id="i6"/></p>
+                                <Input size="sm" placeholder="0904161459" />
                             </Col>
                             <Col xs="12" sm="6">
-                                <p className="label">Cuenta retiro</p>
-                                <Input type="select" name="select" id="service3" size="sm">
-                                    <option disabled>Seleccione la cuenta de retiro</option>
-                                    <option>CUENTA ÚNICA - **** 9077</option>
-                                </Input>
+                                <p className="label">Alias <Tooltipi item="Mensaje de alias" key="i5" id="i5"/></p>
+                                <Input size="sm" placeholder="TV Casa" />
                             </Col>
                             <Col xs="12" sm="6">
-                                <p className="label">Fecha</p>
-                                <Input size="sm" placeholder="24/09/2016" />
+                                <p className="label">Número de contrato</p>
+                                <Input size="sm" placeholder="019228 9292 02929" />
                             </Col>
                             <Col xs="12" sm="6">
                                 <p className="label">Clave dinámica (token) <Tooltipi item="Mensaje de token" key="i4" id="i4"/></p>
