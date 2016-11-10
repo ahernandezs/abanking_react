@@ -1584,15 +1584,24 @@ div#GeneralDetail, div#TransactionDetail{
 #Slidemyservice div.slick-initialized,
 #Slidemyservice div.slick-list{
     height: 224px !important;
-    border-top: 2px solid #BDBDBD;
-    border-bottom: 4px solid #BDBDBD;
+    border-top: 2px solid #e3e3e3;
+    border-bottom: 2px solid #e3e3e3;
 }
 @media (max-width: 543px) {
+    #Slidemyservice div.slick-initialized{
+        margin-top: 10px;
+    }
+    #Slidemyservice div.slick-list{
+        padding-top: 5px;
+    }
     #Slidemyservice div.slick-initialized,
     #Slidemyservice div.slick-list{
-        height: 110px !important;
-        margin-bottom: 30px;
+        height: 118px !important;
+        margin-bottom: 20px;
     }
+}
+#Slidemyservice div.space{
+    padding: 0px 5px;
 }
 #Slidemyservice div.card{
     height: 100px;
@@ -1608,7 +1617,8 @@ div#GeneralDetail, div#TransactionDetail{
     margin: 10px auto;
 }
 #Slidemyservice div.card img + div.service-tx,
-#newPayConfirm div.card img + div.service-tx{
+#newPayConfirm div.card img + div.service-tx,
+#Slideaddservice div.card img + div.service-tx{
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.55);
     color: #ffffff;
@@ -1818,4 +1828,79 @@ div.cardup .card img{
     font-family: 'icomoon' !important;
     margin-right: 8px;
     vertical-align: middle;
+}
+
+/*
+ * Service to pay >> slide add services
+ * ========================================================================== */
+
+#Slideaddservice{
+    width: 98%;
+    margin: auto;
+}
+#Slideaddservice div.slick-initialized{
+    margin-top: 20px;
+}
+#Slideaddservice div.slick-initialized,
+#Slideaddservice div.slick-list{
+    height: 130px !important;
+}
+#Slideaddservice div.space{
+    padding: 0px 5px;
+}
+#Slideaddservice div.card{
+    height: 130px;
+    border: 1px solid #e3e3e3;
+}
+#Slideaddservice div.card img{
+    width: 58%;
+    margin: 10px auto;
+}
+#Slideaddservice div.card img + div.service-tx{
+    right: 50px;
+    height: 80px;
+    border-bottom-right-radius: 0px;
+}
+#Slideaddservice button{
+    margin: 4px;
+}
+#Slideaddservice .slick-prev, #Slideaddservice .slick-next{
+    width: 18px;
+    height: 35px;
+}
+#Slideaddservice .slick-prev:before,
+#Slideaddservice .slick-next:before{
+    color: #009688;
+    font-family: 'icomoon' !important;
+}
+#Slideaddservice .slick-prev:before{
+    content: "\f104";
+}
+#Slideaddservice .slick-next:before{
+    content: "\f105";
+}
+#Slideaddservice .btservice{
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    height: 60px;
+    width: 50px;
+}
+#Slideaddservice .btservice div{
+    background-color: #f1f1f1;
+    border-bottom-right-radius: 4px;
+    width: 100%;
+    height: 30px;
+}
+#Slideaddservice .btservice > div:first-child{
+    border-bottom-right-radius: 0px;
+    height: 50px;
+}
+#Slideaddservice .btservice button{
+    display: block;
+    margin: auto;
+    padding-top: 2px;
+}
+#Slideaddservice .btservice > div:first-child button{
+    padding-top: 10px;
 }

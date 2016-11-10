@@ -1,20 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router';
-import card3 from '../../../../images/services/izzi-min.png';
-import Tooltipi from '../../../share/tool.js';
+import card1 from '../../../../../images/services/izzi-min.png';
+import Tooltipi from '../../../../share/tool.js';
 
-import { Alert, Container, Row, Col, Card, Input } from 'reactstrap';
+import { Alert, Container, Row, Col, Input, Card } from 'reactstrap';
 
-export default class NewPaymentConfirmation extends React.Component{
+export default class ServicesStep2 extends React.Component{
     render(){
         return(
-            <Container id="newPayConfirm">
+            <Container id="servicestep2">
                 <Alert color="warning">
                     Verifica que los datos son correctos antes de confirmar.
                 </Alert>
                 <Row>
                     <Col xs="12" md="4" lg="3">
-                        <Card className="shadow-tertiary"><img src={card3} alt="service" /><div className="service-tx">Tv Casa</div></Card>
+                        <Card className="shadow-tertiary">
+                            <img src={card1} alt="service" />
+                        </Card>
                     </Col>
                     <Col xs="12" md="8" lg="9">
                         <Row>
@@ -26,22 +28,21 @@ export default class NewPaymentConfirmation extends React.Component{
                                 </div>
                             </Col>
                             <Col xs="12" sm="6">
-                                <p className="label">Cuenta retiro</p>
+                                <p className="label">Número de contrato</p>
                                 <div className="label-conf">
-                                    CUENTA ÚNICA - **** 9077 $12,000.98
-                                    <small><strong>MXN</strong></small>
+                                    01928 9292 02929
                                 </div>
                             </Col>
                             <Col xs="12" sm="6">
-                                <p className="label">Monto a pagar</p>
+                                <p className="label">Alias</p>
                                 <div className="label-conf">
-                                    $ 650.00 <small><strong>MXN</strong></small>
+                                    Internet Casa
                                 </div>
                             </Col>
                             <Col xs="12" sm="6">
-                                <p className="label">Fecha</p>
+                                <p className="label">Referencia</p>
                                 <div className="label-conf">
-                                    24/09/2016
+                                    0904161459
                                 </div>
                             </Col>
                             <Col xs="12" sm={{ size: 6, offset: 6 }}>
@@ -53,10 +54,10 @@ export default class NewPaymentConfirmation extends React.Component{
                 </Row>
                 <Row>
                     <Col xs="6" sm={{ size: 4, offset: 4}} md={{ size: 3, offset: 6 }} lg={{ size: 2, offset: 8}}>
-                        <Link to="/newPayment" activeClassName="active" className="btn btn-cancel btn-block">Anterior</Link>
+                        <Link to="/servicesstep1" activeClassName="active" className="btn btn-cancel btn-block">Anterior</Link>
                     </Col>
                     <Col xs="6" sm="4" md="3" lg="2">
-                        <Link to="/newPayment" activeClassName="active" className="btn btn-confirm btn-block">Confirmar</Link>
+                        <Link to="/services" activeClassName="active" className="btn btn-confirm btn-block">Confirmar</Link>
                     </Col>
                 </Row>
             </Container>

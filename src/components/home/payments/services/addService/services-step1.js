@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import card1 from '../../../../images/services/izzi-min.png';
-import Tooltipi from '../../../share/tool.js';
+import card1 from '../../../../../images/services/izzi-min.png';
+import Tooltipi from '../../../../share/tool.js';
 
 import { Alert, Container, Row, Col, Input, Card } from 'reactstrap';
 

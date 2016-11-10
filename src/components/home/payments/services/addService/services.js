@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import NoService from './noservice.js';
+import NoService from '../noservice.js';
+import SlideAddService from './slideaddservice.js';
 
 import { Alert, Container, Row, Col } from 'reactstrap';
 
@@ -20,7 +21,7 @@ class ServicesAdmin extends React.Component{
                 </Row>
                 <Row>
                     <Col xs="12">
-                        In process...
+                        <SlideAddService></SlideAddService>
                     </Col>
                 </Row>
             </Container>

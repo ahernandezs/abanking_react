@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Slidemyservice from './slidemyservices.js';
-import NoService from './noservice.js';
+import NoService from '../noservice.js';
 
 import { Alert, Container, Row, Col, Input, InputGroupAddon, InputGroup } from 'reactstrap';
 
