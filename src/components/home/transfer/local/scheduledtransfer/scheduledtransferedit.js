@@ -1,9 +1,8 @@
 import React from 'react';
-import { Container, Row, Col, Button, Modal, ModalHeader, Input, InputGroup, InputGroupAddon, Card } from 'reactstrap';
-import card1 from '../../../../../images/services/izzi-min.png';
+import { Container, Row, Col, Button, Modal, ModalHeader, Input, InputGroup, InputGroupAddon } from 'reactstrap';
 import Tooltipi from '../../../../share/tool.js';
 
-export default class ScheduledPayEdit extends React.Component {
+export default class ScheduledTransEdit extends React.Component {
     constructor(props) {
         super(props);
 
@@ -26,37 +25,38 @@ export default class ScheduledPayEdit extends React.Component {
                 </Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalHeader toggle={this.toggle}>
-                        Modificar pago programado
+                        Modificar transferencia programada
                     </ModalHeader>
                     <Container className="cardup">
                         <Row>
                             <Col xs="12" sm="6">
-                                <p className="label">Servicio</p>
-                                <div className="label-conf">
-                                    <Card className="shadow-tertiary">
-                                        <img src={card1} alt="service" />
-                                        <strong>Izzi Telecom</strong><br />
-                                        <small>TV Casa</small>
-                                    </Card>
-                                </div>
-                            </Col>
-                            <Col xs="12" sm="6">
-                                <p className="label">Monto a pagar</p>
-                                <InputGroup size="sm">
-                                    <Input placeholder="500.00" />
-                                    <InputGroupAddon>MXN</InputGroupAddon>
-                                </InputGroup>
-                            </Col>
-                            <Col xs="12" sm="6">
-                                <p className="label">Cuenta retiro</p>
-                                <Input type="select" name="select" id="pay1" size="sm">
-                                    <option disabled>Seleccione la cuenta de retiro</option>
+                                <p className="label">Cuenta origen</p>
+                                <Input type="select" name="select" id="trans1" size="sm">
+                                    <option disabled>Seleccione la cuenta origen</option>
                                     <option>CUENTA ÚNICA - **** 9077</option>
                                 </Input>
                             </Col>
                             <Col xs="12" sm="6">
+                                <p className="label">Cuenta destino</p>
+                                <Input type="select" name="select" id="trans2" size="sm">
+                                    <option disabled>Seleccione la cuenta destino</option>
+                                    <option>CUENTA ÚNICA - **** 9088</option>
+                                </Input>
+                            </Col>
+                            <Col xs="12" sm="6">
+                                <p className="label">Importe</p>
+                                <InputGroup size="sm">
+                                    <Input placeholder="1500.00" />
+                                    <InputGroupAddon>MXN</InputGroupAddon>
+                                </InputGroup>
+                            </Col>
+                            <Col xs="12" sm="6">
                                 <p className="label">Fecha</p>
-                                <Input size="sm" placeholder="24/09/2016" />
+                                <Input size="sm" placeholder="15/09/2016" />
+                            </Col>
+                            <Col xs="12" sm="6">
+                                <p className="label">Concepto</p>
+                                <Input type="textarea" name="text" id="text4" />
                             </Col>
                             <Col xs="12" sm="6">
                                 <p className="label">Clave dinámica (token) <Tooltipi item="Mensaje de token" key="i4" id="i4"/></p>

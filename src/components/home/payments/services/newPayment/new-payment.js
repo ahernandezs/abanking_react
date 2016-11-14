@@ -5,7 +5,6 @@ import NoService from '../noservice.js';
 
 import { Alert, Container, Row, Col, Input, InputGroupAddon, InputGroup } from 'reactstrap';
 
-
 class Servicetopay extends React.Component{
     render(){
         return(

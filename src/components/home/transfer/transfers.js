@@ -1,11 +1,11 @@
 import 'rc-collapse/assets/index.css';
-import '../../../../hover.css';
+import '../../../hover.css';
 import React from 'react';
 import { Link } from 'react-router';
 
 import Collapse, { Panel } from 'rc-collapse';
 
-const payment = React.createClass({
+const Transfer = React.createClass({
 
     getInitialState() {
         return {
@@ -25,28 +25,26 @@ const payment = React.createClass({
     render() {
         const activeKey = this.state.activeKey;
         return (
-            <div className="PayTrans">
+            <div id="transfers" className="PayTrans">
                 <div className="generalTitle">
                     <p>
-                        Pago de servicios<br />
-                        <small>Realiza el pago de servicios, como: luz, agua, internet, entre otros.</small>
+                        Transferencia entre mis cuentas<br />
+                        <small>Realiza transferencias entre cuentas abanking.</small>
                     </p>
                 </div>
                 <div className="hidden-sm-down">
                     <div className="menu">
-                        <Link to="/NewPayment" activeClassName="active">Nuevo pago</Link>
-                        <Link to="/previousPayment" activeClassName="active">Pagos anteriores</Link>
-                        <Link to="/scheduledPay" activeClassName="active">Pagos programados</Link>
-                        <Link to="/services" activeClassName="active">Servicios</Link>
+                        <Link to="/newTransfer" activeClassName="active">Nueva transferencia</Link>
+                        <Link to="/previousTrans" activeClassName="active">Transferencias anteriores</Link>
+                        <Link to="/scheduledTransfer" activeClassName="active">Transferencias programadas</Link>
                     </div>
                 </div>
                 <div className="hidden-md-up">
                     <Collapse accordion onChange={this.onChange} activeKey={activeKey}>
                         <Panel header="Opciones de pago" key="1">
-                            <Link to="/NewPayment" activeClassName="active" onClick={this.setActivityKey}>Nuevo pago</Link>
-                            <Link to="/previousPayment" activeClassName="active" onClick={this.setActivityKey}>Pagos anteriores</Link>
-                            <Link to="/scheduledPay" activeClassName="active" onClick={this.setActivityKey}>Pagos programados</Link>
-                            <Link to="/services" activeClassName="active" onClick={this.setActivityKey}>Servicios</Link>
+                            <Link to="/newTransfer" activeClassName="active" onClick={this.setActivityKey}>Nueva transferencia</Link>
+                            <Link to="/previousTrans" activeClassName="active" onClick={this.setActivityKey}>Transferencias anteriores</Link>
+                            <Link to="/scheduledTransfer" activeClassName="active" onClick={this.setActivityKey}>Transferencias programadas</Link>
                         </Panel>
                     </Collapse>
                 </div>
@@ -58,4 +56,4 @@ const payment = React.createClass({
     }
 });
 
-export default payment;
+export default Transfer;

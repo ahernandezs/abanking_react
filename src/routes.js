@@ -31,6 +31,13 @@ import ServicestoAdd from './components/home/payments/services/addService/servic
 import PaymentCredit from './components/home/payments/credit/payment-credit.js';
 import NewPaymentc from './components/home/payments/credit/new-paymentc.js';
 
+//Transfers
+import Transfer from './components/home/transfer/transfers.js';
+import NewTransfer from './components/home/transfer/local/newTransfer/newtransfer.js';
+import NewTransferConf from './components/home/transfer/local/newTransfer/newtransfer-confirm.js';
+import PreviousTrans from './components/home/transfer/local/previous-transfer.js';
+import ScheduledTransfer from './components/home/transfer/local/scheduledtransfer/scheduledtransfer.js';
+
 export default (
 	<Router history={hashHistory}>
 		<Route component={LayoutLogin}>
@@ -57,6 +64,12 @@ export default (
 			</Route>
 			<Route component={PaymentCredit}>
 				<Route path="/newCreditPayment" component={NewPaymentc} />
+			</Route>
+			<Route component={Transfer}>
+				<Route path="/newTransfer" component={NewTransfer} />
+				<Route path="/newTransferConf" component={NewTransferConf} />
+				<Route path="/previousTrans" component={PreviousTrans} />
+				<Route path="/scheduledTransfer" component={ScheduledTransfer} />
 			</Route>
 		</Route>
 	</Router>
