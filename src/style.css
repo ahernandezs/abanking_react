@@ -590,10 +590,12 @@ h4{
     border-bottom-left-radius: 4px;
 }
 .nav-menu .pay{
+    font-size: 1em;
     width: 229px;
 }
 .nav-menu .trans{
-    width: 264px;
+    font-size: 1em;
+    width: 270px;
 }
 .nav-menu ul{
     margin: 0;
@@ -1446,12 +1448,12 @@ div#GeneralDetail, div#TransactionDetail{
  * Payments
  * ========================================================================== */
 
-#PaymentService{
+.PayTrans{
     padding-top: 20px;
     width: 100%;
     min-height: 100%;
 }
-#PaymentService .generalTitle{
+.PayTrans .generalTitle{
     line-height: 1;
     width: 100%;
     height: 40px;
@@ -1460,60 +1462,64 @@ div#GeneralDetail, div#TransactionDetail{
     margin-bottom: 20px;
 }
 @media (max-width: 543px) {
-    #PaymentService .generalTitle{
+    .PayTrans .generalTitle{
         height: 50px;
     }
 }
-#PaymentService .generalTitle p:before{
+.PayTrans .generalTitle p:before{
     content: "\e900";
     font-family: 'icomoon' !important;
     margin-right: 10px;
     color: #009688;
 }
-#PaymentService .generalTitle small{
+#transfers .generalTitle p:before{
+    content: "\e908";
+}
+
+.PayTrans .generalTitle small{
     color: #757575;
     font-size: .7em;
 }
-#PaymentService .rc-collapse, #PaymentService .menu{
+.PayTrans .rc-collapse, .PayTrans .menu{
     min-height: 38px;
     border-radius: 0;
     border: 0;
     border-top: 4px solid #039be5;
     background-color: #f7f7f7;
 }
-#PaymentService .rc-collapse-content-box,
-#PaymentService .rc-collapse-content{
+.PayTrans .rc-collapse-content-box,
+.PayTrans .rc-collapse-content{
     background-color: #f7f7f7;
     margin: 0;
     padding: 0;
 }
-#PaymentService .rc-collapse-content-box a{
+.PayTrans .rc-collapse-content-box a{
     width: 100%;
     display: inline-block;
     padding: 4px 16px;
     color: #212121;
     text-decoration: none;
 }
-#PaymentService .rc-collapse-content-box a:hover,
-#PaymentService .rc-collapse-content-box a:focus{
+.PayTrans .rc-collapse-content-box a:hover,
+.PayTrans .rc-collapse-content-box a:focus{
     color: #000000;
     background-color: #f1f1f1;
 }
-#PaymentService .menu{
+.PayTrans .menu{
     height: 38px;
 }
-#PaymentService .menu a{
+.PayTrans .menu a{
     height: 34px;
     display: inline-block;
     padding: 4px 20px;
     color: #212121;
     text-decoration: none;
 }
-#PaymentService .menu a:hover,
-#PaymentService .menu a:focus{
+.PayTrans .menu a:hover,
+.PayTrans .menu a:focus{
     color: #000000;
 }
-#PaymentService div.cont-payment{
+.PayTrans div.cont-payment{
     width: 100%;
     min-height: 100%;
     padding: 5px;
@@ -1523,17 +1529,17 @@ div#GeneralDetail, div#TransactionDetail{
     padding-top: 20px;
     padding-bottom: 40px;
 }
-#PaymentService .alert{
+.PayTrans .alert{
     text-align: center;
     padding: 2px;
     font-size: .9em;
 }
-#PaymentService .alert + a{
+.PayTrans .alert + a{
     max-width: 200px;
     display: block;
     margin: 80px auto;
 }
-#PaymentService .alert + a:before{
+.PayTrans .alert + a:before{
     content: "\e973";
     font-family: 'icomoon' !important;
     margin-right: 8px;
@@ -1544,14 +1550,17 @@ div#GeneralDetail, div#TransactionDetail{
  * Service to pay
  * ========================================================================== */
 
-#Servicetopay .form-control{
+#Servicetopay .form-control,
+#newtransfer .form-control{
     height: 28px;
 }
-#Servicetopay > div:nth-child(2) > div:nth-child(2) > div > div{
+#Servicetopay > div:nth-child(2) > div:nth-child(2) > div > div,
+#newtransfer > div:nth-child(2) > div div div{
     margin-bottom: 30px;
 }
 #Servicetopay > div:nth-child(3) > div,
-#newPayConfirm > div:nth-child(3) > div{
+#newPayConfirm > div:nth-child(3) > div,
+#newtransfer > div:nth-child(3) > div{
     margin-top: 30px;
 }
 @media (max-width: 767px) {
@@ -1678,32 +1687,43 @@ div#GeneralDetail, div#TransactionDetail{
  * Service to pay >> previouspay
  * ========================================================================== */
 
-#previouspay .normalTable{
+#previouspay .normalTable,
+#previoustrans .normalTable{
     margin-top: 30px;
 }
 #previouspay .normalTable tbody tr td:nth-child(3),
-#scheduledpay .normalTable tbody tr td:nth-child(3){
+#previoustrans .normalTable tbody tr td:nth-child(2),
+#previoustrans .normalTable tbody tr td:nth-child(3),
+#scheduledpay .normalTable tbody tr td:nth-child(3),
+#scheduledTransfer .normalTable tbody tr td:nth-child(2),
+#scheduledTransfer .normalTable tbody tr td:nth-child(3){
     color: #000000;
     min-width: 280px;
 }
 #previouspay .normalTable tbody tr td:nth-child(4),
-#scheduledpay .normalTable tbody tr td:nth-child(4){
+#previoustrans .normalTable tbody tr td:nth-child(5),
+#scheduledpay .normalTable tbody tr td:nth-child(4),
+#scheduledTransfer .normalTable tbody tr td:nth-child(5){
     color: #75a83e;
-    min-width: 150px;
+    min-width: 130px;
 }
-#scheduledpay .normalTable tbody tr td:nth-child(5) div{
+#scheduledpay .normalTable tbody tr td:nth-child(5) div,
+#scheduledTransfer .normalTable tbody tr td:nth-child(6) div{
     display: inline-block;
     margin-left: 10px;
 }
+
 /*
  * Service to pay >> scheduledpay
  * ========================================================================== */
 
-#scheduledpay .normalTable thead tr th:nth-child(5){
+#scheduledpay .normalTable thead tr th:nth-child(5),
+#scheduledTransfer .normalTable thead tr th:nth-child(6){
     width: 100px;
     cursor: default;
 }
-#scheduledpay .normalTable thead tr th:nth-child(5):after{
+#scheduledpay .normalTable thead tr th:nth-child(5):after,
+#scheduledTransfer .normalTable thead tr th:nth-child(6):after{
     content: "";
 }
 
@@ -1903,4 +1923,17 @@ div.cardup .card img{
 }
 #Slideaddservice .btservice > div:first-child button{
     padding-top: 10px;
+}
+
+/*
+ * Service to pay >> newtransfer
+ * ========================================================================== */
+
+#newtransfer > div:nth-child(2) > div:nth-child(1) div > div:nth-child(3) div{
+    margin: 0;
+    padding: 0;
+}
+#newtransfer > div:nth-child(2) > div:nth-child(2) textarea{
+    height: 110px;
+    max-height: 110px;
 }

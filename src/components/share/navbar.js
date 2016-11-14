@@ -57,7 +57,7 @@ export default class Navbar extends React.Component {
                                     </button>
                                     <div className="trans dropdown-menu dropdown-menu-left shadow-tertiary" aria-labelledby="navbar-trans">
                                         <ul>
-                                            <li><Link to="/accounts" activeClassName="active" className="btn btn-navbar"><span className="icon-loop"></span>&nbsp;&nbsp;Transferencia entre mis cuentas</Link></li>
+                                            <li><Link to="/newTransfer" activeClassName="active" className="btn btn-navbar"><span className="icon-loop"></span>&nbsp;&nbsp;Transferencia entre mis cuentas</Link></li>
                                             <li><Link to="/accounts" activeClassName="active" className="btn btn-navbar"><span className="icon-earth"></span>&nbsp;&nbsp;Transferencia a terceros SPEI</Link></li>
                                         </ul>
                                     </div>
@@ -187,7 +187,7 @@ export default class Navbar extends React.Component {
                                 <li className="nav-item">
                                     <Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical">Transferencias</Link>
                                     <ul className="nav-second nav navbar-nav">
-                                        <li className="nav-item"><Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-loop"></span>&nbsp;&nbsp;Transferencia entre mis cuentas</Link></li>
+                                        <li className="nav-item"><Link to="/newTransfer" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-loop"></span>&nbsp;&nbsp;Transferencia entre mis cuentas</Link></li>
                                         <li className="nav-item"><Link to="/accounts" activeClassName="active" className="btn btn-navbar-vertical"><span className="icon-earth"></span>&nbsp;&nbsp;Transferencia a terceros SPEI</Link></li>
                                     </ul>
                                 </li>

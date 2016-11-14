@@ -1,11 +1,11 @@
-#PaymentService .menu a {
+.PayTrans .menu a {
     box-shadow: 0 0 1px transparent;
     position: relative;
     overflow: hidden;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
 }
-#PaymentService .menu a:before {
+.PayTrans .menu a:before {
     left: 0;
     right: 0;
     bottom: 0;
@@ -23,9 +23,9 @@
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
-#PaymentService .menu a:hover:before,
-#PaymentService .menu a:focus:before,
-#PaymentService .menu a:active:before {
+.PayTrans .menu a:hover:before,
+.PayTrans .menu a:focus:before,
+.PayTrans .menu a:active:before {
     -webkit-transform: translateY(0);
     transform: translateY(0);
 }
