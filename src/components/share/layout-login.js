@@ -42,6 +42,7 @@ export default class LayoutLogin extends React.Component {
                         </Row>
                     </Container>
                 </div>
+                
                 <div className="line-second"></div>
 
                 <Container id="container-login">

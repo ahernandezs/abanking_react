@@ -156,12 +156,13 @@ html, body, #root, .div-cont {
     color: #212121;
 }
 .link, .link:hover, .link:active, .link:link, .link:visited{
-    color: #757575;
+    color: #0275D8;
+    cursor: pointer;
     font-size: 10pt;
     text-decoration: none;
 }
 .link:hover{
-    color: #000000;
+    color: #0661AF;
 }
 div.divider{
     width: 100%;
@@ -325,9 +326,6 @@ h4{
 /*
  * LayoutLogin
  * ========================================================================== */
-.color{
-    background-color: rgb(235, 139, 104);
-}
 #container-login{
     padding-top: 70px;
     padding-bottom: 90px;

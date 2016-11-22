@@ -22,7 +22,7 @@ export default class Footer extends React.Component {
                         <Col xs="12" sm="5" className="footer-right">
                             <p>
                                 <Link to="" activeClassName="active" className="link">Ayuda</Link>
-                                <Link to="" activeClassName="active" className="link">Contácto</Link>
+                                <Link to="" activeClassName="active" className="link">Contacto</Link>
                                 <Link to="" activeClassName="active" className="link">Privacidad</Link>
                             </p>
                         </Col>
