@@ -1,17 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
+import LoginImages from '../share/login-images.js';
 
-import {    Container, Row, Col,
+import {    Row, Col,
             CardBlock, CardTitle } from 'reactstrap';
 
 export default class Login extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            containerFluid: true
-        };
-    }
     render() {
         return (
             <CardBlock id="login">
@@ -33,22 +27,7 @@ export default class Login extends React.Component {
                     </Col>
                 </Row>
 
-                <Container fluid={this.state.containerFluid}>
-                    <Row>
-                        <Col xs="12" md={{ size: 8, offset: 2 }}>
-                            <div className="img1_opt orange"></div>
-                            <div className="img2_opt orange"></div>
-                            <div className="img3_opt orange"></div>
-                            <div className="img4_opt orange"></div>
-                            <div className="img5_opt orange"></div>
-                            <div className="img6_opt orange"></div>
-                            <div className="img7_opt orange"></div>
-                            <div className="img8_opt orange"></div>
-                            <div className="img9_opt orange"></div>
-                            <div className="img10_opt orange"></div>
-                        </Col>
-                    </Row>
-                </Container>
+                <LoginImages></LoginImages>
 
                 <Row>
                     <Col md={{ size: 8, offset: 2 }}>
